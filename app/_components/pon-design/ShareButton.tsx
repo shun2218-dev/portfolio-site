@@ -30,7 +30,17 @@ const ShareButtonMemo: FC<Props> = ({ type, onClick, counterState, label, iconPa
   }, [type])
   return (
     <button className={[styles['c-share-button'], iconClass].join(' ')} onClick={onClick}>
-      {iconPath !== undefined && iconSize !== undefined && <Image src={iconPath} alt={type} width={iconSize} height={iconSize} className={styles['c-share-button__icon']} />}
+      {iconPath !== undefined && iconSize !== undefined && (
+        <Image
+          src={iconPath}
+          alt={type}
+          width={iconSize}
+          height={iconSize}
+          className={styles['c-share-button__icon']}
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
+        />
+      )}
       {label !== undefined && <span className={styles['c-share-button__label']}>{label}</span>}
       {type === 'thumbsUp' && <span className={styles['c-share-button__counter']}>{counterState!}</span>}
     </button>

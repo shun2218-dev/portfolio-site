@@ -19,6 +19,8 @@ const WorksPage = () => {
                     width={345}
                     height={235}
                     style={{ objectFit: 'contain', height: 'auto' }}
+                    placeholder="blur"
+                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
                   />
                 </div>
                 <h3 className="p-works-article__item-title u-fs18">Smoothiesta 様</h3>
@@ -32,6 +34,8 @@ const WorksPage = () => {
                     width={345}
                     height={235}
                     style={{ objectFit: 'contain', height: 'auto' }}
+                    placeholder="blur"
+                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
                   />
                 </div>
                 <h3 className="p-works-article__item-title u-fs18">Web Conference 様</h3>
@@ -45,6 +49,8 @@ const WorksPage = () => {
                     width={345}
                     height={235}
                     style={{ objectFit: 'contain', height: 'auto' }}
+                    placeholder="blur"
+                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
                   />
                 </div>
                 <h3 className="p-works-article__item-title u-fs18">LAMINA 様</h3>
@@ -58,6 +64,8 @@ const WorksPage = () => {
                     width={345}
                     height={235}
                     style={{ objectFit: 'contain', height: 'auto' }}
+                    placeholder="blur"
+                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
                   />
                 </div>
                 <h3 className="p-works-article__item-title u-fs18">CITYLab 様</h3>
@@ -71,6 +79,8 @@ const WorksPage = () => {
                     width={345}
                     height={235}
                     style={{ objectFit: 'contain', height: 'auto' }}
+                    placeholder="blur"
+                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
                   />
                 </div>
                 <h3 className="p-works-article__item-title u-fs18">TABILOG 様</h3>

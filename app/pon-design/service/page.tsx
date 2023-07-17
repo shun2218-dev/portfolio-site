@@ -23,6 +23,8 @@ const ServicePage = () => {
                       width={335}
                       height={211}
                       style={{ objectFit: 'contain', height: 'auto' }}
+                      placeholder="blur"
+                      blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
                     />
                   ) : (
                     <Image
@@ -32,6 +34,8 @@ const ServicePage = () => {
                       width={445}
                       height={280}
                       style={{ objectFit: 'contain', height: 'auto' }}
+                      placeholder="blur"
+                      blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
                     />
                   )}
                 </div>
@@ -53,6 +57,8 @@ const ServicePage = () => {
                       width={335}
                       height={211}
                       style={{ objectFit: 'contain', height: 'auto' }}
+                      placeholder="blur"
+                      blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
                     />
                   ) : (
                     <Image
@@ -62,6 +68,8 @@ const ServicePage = () => {
                       width={445}
                       height={280}
                       style={{ objectFit: 'contain', height: 'auto' }}
+                      placeholder="blur"
+                      blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
                     />
                   )}
                 </div>
@@ -84,6 +92,8 @@ const ServicePage = () => {
                       width={335}
                       height={211}
                       style={{ objectFit: 'contain', height: 'auto' }}
+                      placeholder="blur"
+                      blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
                     />
                   ) : (
                     <Image
@@ -93,6 +103,8 @@ const ServicePage = () => {
                       width={445}
                       height={280}
                       style={{ objectFit: 'contain', height: 'auto' }}
+                      placeholder="blur"
+                      blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
                     />
                   )}
                 </div>

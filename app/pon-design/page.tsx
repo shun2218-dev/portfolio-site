@@ -157,6 +157,8 @@ const TopPageMemo = () => {
                     width={335}
                     height={210}
                     style={{ objectFit: 'contain', aspectRatio: 1.59 }}
+                    placeholder="blur"
+                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
                   />
                 </div>
                 <h3 className={[styles['p-top-service__item-title'], 'u-fs18'].join(' ')}>Webサイト制作</h3>
@@ -171,6 +173,8 @@ const TopPageMemo = () => {
                     width={335}
                     height={210}
                     style={{ objectFit: 'contain', aspectRatio: 1.59 }}
+                    placeholder="blur"
+                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
                   />
                 </div>
                 <h3 className={[styles['p-top-service__item-title'], 'u-fs18'].join(' ')}>Webサイト運用</h3>
@@ -185,6 +189,8 @@ const TopPageMemo = () => {
                     width={335}
                     height={210}
                     style={{ objectFit: 'contain', aspectRatio: 1.59 }}
+                    placeholder="blur"
+                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
                   />
                 </div>
                 <h3 className={[styles['p-top-service__item-title'], 'u-fs18'].join(' ')}>アプリ開発</h3>
@@ -217,6 +223,8 @@ const TopPageMemo = () => {
                             width={750}
                             height={510}
                             style={{ objectFit: 'contain', aspectRatio: 1.47, height: 'auto' }}
+                            placeholder="blur"
+                            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
                           />
                         </SwiperSlide>
                       ) : (
@@ -227,6 +235,8 @@ const TopPageMemo = () => {
                             width={335}
                             height={210}
                             style={{ objectFit: 'cover', aspectRatio: 1.47, height: 'auto', verticalAlign: 'bottom' }}
+                            placeholder="blur"
+                            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
                           />
                         </SwiperSlide>
                       )
@@ -289,6 +299,8 @@ const TopPageMemo = () => {
                   height={140}
                   sizes="100vw"
                   style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                  placeholder="blur"
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
                 />
               ) : (
                 <Image
@@ -299,6 +311,8 @@ const TopPageMemo = () => {
                   height={332}
                   sizes="100vw"
                   style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                  placeholder="blur"
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
                 />
               )}
             </div>
