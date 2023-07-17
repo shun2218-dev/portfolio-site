@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 const siteName = 'Portfolio Site'
-const description = ''
+const description = 'Here is a portfolio site created using Next.js.'
 const url = process.env.SITE_URL
 
 export const metadata: Metadata = {

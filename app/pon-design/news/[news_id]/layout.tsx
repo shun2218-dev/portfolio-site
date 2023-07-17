@@ -9,7 +9,7 @@ export async function generateMetadata({ params }: Omit<MetaProps, 'searchParams
 
   const siteName = data.title
   const url = `${process.env.SITE_URL_PON}/news/${params.news_id}`
-  const description = ''
+  const description = 'This page is a news article page of PON DESIGN'
 
   return {
     title: `${siteName} | PON DESIGN`,
