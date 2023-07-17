@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { FC, ReactNode } from 'react'
 
 const siteName = 'WOWRKS'
-const description = ''
+const description = 'This page is a works page of PON DESIGN'
 const url = `${process.env.SITE_URL_PON}/works`
 
 export const metadata: Metadata = {
