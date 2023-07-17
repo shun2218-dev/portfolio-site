@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -17,6 +17,10 @@
     "next": "13.4.9",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-use": "^17.4.0",
+    "sass": "^1.63.6",
+    "swiper": "^10.0.4",
+    "swr": "^2.2.0",
     "typescript": "5.1.6"
   }
 }

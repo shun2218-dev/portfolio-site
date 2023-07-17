@@ -1,0 +1,43 @@
+@charset "utf-8";
+@use './config/mixin' as mix;
+
+/* share button */
+$blue: #2d77f1;
+$twitter-blue: #3495df;
+$light-blue: #39a4de;
+
+.c-share-button {
+  border-radius: 6px;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  line-height: 0.5;
+}
+
+.c-share-button {
+  padding: 6px 10px;
+}
+.c-share-button.c-share-button__icon--share span,
+.c-share-button.c-share-button__icon--bookmark span {
+  padding: 4px 5px;
+}
+
+.c-share-button__icon {
+  margin-right: 5px;
+}
+
+.c-share-button--blue {
+  background-color: $blue;
+}
+.c-share-button--twitter {
+  background-color: $twitter-blue;
+}
+.c-share-button--light-blue {
+  background-color: $light-blue;
+}
+
+.c-share-button--only-icon {
+  padding: 0;
+}

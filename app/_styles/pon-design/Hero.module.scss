@@ -1,0 +1,14 @@
+@charset "utf-8";
+@use './config/variable' as var;
+.c-hero__inner {
+  background-image: url(/images/pon-design/page-hero.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: calc(var.$header-height + 30px) 0 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .c-hero__inner {
+    background-image: url(/images/pon-design/page-hero_pc.png);
+  }
+}

@@ -1,0 +1,54 @@
+@charset "utf-8";
+@use './config/mixin' as mix;
+
+.c-news__list-item {
+  padding-bottom: 35px;
+}
+
+.c-news__header {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.c-news__date {
+  font-size: 15px;
+  font-weight: normal;
+  @include mix.montserrat-regular;
+}
+
+.c-news__label {
+  border: none;
+  line-height: 1.3;
+  display: grid;
+  place-content: center;
+  padding: 2px 21px;
+  border-radius: 48px;
+  background-color: var(--dark-gray);
+  @include mix.montserrat-bold;
+  min-width: 82px;
+  box-sizing: border-box;
+}
+
+.c-news__label-text {
+  font-size: 11px;
+}
+
+.c-news__article-title {
+  margin-top: 10px;
+  @include mix.hiragino-w3;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .c-news__link {
+    display: flex;
+    gap: 30px;
+  }
+  .c-news__article-title {
+    overflow: hidden;
+  }
+  .c-news__label {
+    white-space: nowrap;
+  }
+}

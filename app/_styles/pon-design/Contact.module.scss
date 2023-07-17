@@ -1,0 +1,14 @@
+@charset "utf-8";
+@use './config/mixin' as mix;
+
+.c-contact {
+  margin-top: 40px;
+  padding: 60px 20px;
+  background-color: var(--light-gray);
+}
+
+.c-contact__text {
+  text-align: center;
+  line-height: 1.8;
+  font-size: 1rem;
+}

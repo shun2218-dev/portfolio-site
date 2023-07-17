@@ -1,0 +1,47 @@
+@charset "utf-8";
+@use './config/mixin' as mix;
+/* footer */
+.l-footer {
+  padding: 60px 20px;
+  background-color: var(--footer-bg);
+  position: relative;
+}
+
+.l-footer__nav-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 20px;
+  color: #ffffff;
+  font-size: 12px;
+  @include mix.montserrat-bold;
+  padding: 0 10px;
+}
+
+.l-footer__copyright {
+  color: #a798b7;
+  display: block;
+  margin-top: 30px;
+  text-align: center;
+  @include mix.montserrat-regular;
+  font-size: 10px;
+}
+
+.l-footer__scroll-button {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  background-image: url(/images/pon-design/chevron-up.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .l-footer__nav-menu {
+    justify-content: center;
+  }
+}

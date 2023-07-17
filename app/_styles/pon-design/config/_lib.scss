@@ -1,0 +1,11 @@
+.swiper-pagination {
+  position: relative !important;
+  left: 0 !important;
+  text-align: right;
+}
+.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: var(--swiper-theme-color);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}

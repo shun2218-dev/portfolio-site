@@ -1,0 +1,48 @@
+@charset "utf-8";
+@use './config/mixin' as mix;
+
+.c-title {
+  @include mix.montserrat-bold;
+  font-size: 30px;
+  text-align: center;
+}
+
+.c-title span {
+  display: block;
+  @include mix.hiragino-w6;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 2;
+}
+
+.c-title--section {
+  color: var(--primary);
+  margin-bottom: 30px;
+}
+
+.c-title--page {
+  color: #ffffff;
+}
+
+.c-title--sm {
+  font-size: 24px;
+}
+
+.c-title--thin {
+  @include mix.hiragino-w3;
+}
+
+.c-title .c-title--sm {
+  font-size: 18px;
+}
+.c-title--lg {
+  font-size: 48px;
+}
+@media screen and (min-width: 768px) {
+  .c-title--sm {
+    font-size: 32px;
+  }
+  .c-title .c-title--lg {
+    font-size: 52px;
+  }
+}

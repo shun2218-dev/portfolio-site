@@ -1,0 +1,129 @@
+@charset "utf-8";
+@use './config/mixin' as mix;
+@use './config/variable' as var;
+
+/* detail */
+.p-detail-content {
+  margin: 40px 0;
+}
+.p-detail-content__inner {
+  padding: 0 20px;
+}
+
+.p-detail-content__page-title {
+  @include mix.montserrat-regular;
+  font-size: 22px;
+}
+
+.p-detail-content__header {
+  margin: 48px 0 14px;
+}
+
+.p-detail-content__image {
+  width: 100%;
+}
+
+.p-detail-content__prologue-wrapper {
+  margin-top: 30px;
+  @include mix.hiragino-w3;
+  font-size: 1rem;
+}
+
+.p-detail-content__main-sentence {
+  @include mix.hiragino-w3;
+  font-size: 1rem;
+}
+
+.p-detail-content__sentence-wrapper {
+  margin-top: 56px;
+}
+
+.p-detail-content__topic-title {
+  @include mix.hiragino-w6;
+  font-size: 18px;
+  padding-left: 15px;
+  position: relative;
+}
+.p-detail-content__topic-title::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 6px;
+  background-color: #391e88;
+  border-radius: 24px;
+}
+
+.p-detail-content__sentence {
+  margin-top: 18px;
+}
+
+.p-detail-content__sentence:not(:first-of-type) {
+  margin-top: 50px;
+}
+
+.p-detail-content__sns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 40px;
+}
+
+.p-detail-pager {
+  padding-bottom: 40px;
+  color: #391e88;
+}
+
+.p-detail-pager__inner {
+  padding: 0 20px;
+}
+.p-detail-pager__container {
+  display: flex;
+  gap: 22px;
+  padding: 40px 20px;
+  border-top: 1px solid #b8aed5;
+  border-bottom: 1px solid #b8aed5;
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.p-detail-pager__container::before {
+  content: '';
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  display: block;
+  height: 83px;
+  border-right: 1px solid #b8aed5;
+}
+
+.p-detail-pager__previous,
+.p-detail-pager__next {
+  width: 50%;
+}
+
+.p-detail-pager__page-title .p-detail-pager__link {
+  font-size: 12px;
+}
+.p-detail-pager__link {
+  @include mix.hiragino-w3;
+}
+
+.p-detail-pager__list-link {
+  font-size: 14px;
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .p-detail-pager__container::before {
+    top: 8%;
+  }
+
+  .p-detail-pager__page-title {
+    text-align: center;
+  }
+}

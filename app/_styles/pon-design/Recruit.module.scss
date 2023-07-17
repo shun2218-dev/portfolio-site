@@ -1,0 +1,143 @@
+@charset "utf-8";
+@use './config/mixin' as mix;
+@use './config/variable' as var;
+
+/* recruit */
+$border-color: #b8aed5;
+$devider-color: #dddddd;
+.p-recruit-message {
+  margin: 40px 0;
+  padding-bottom: 40px;
+}
+.p-recruit-message__inner {
+  padding: 0 20px;
+  margin-bottom: 40px;
+}
+
+.p-recruit-message__text {
+  display: block;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.p-recruit-message__image {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.p-recruit-info {
+  width: 100%;
+  padding-bottom: 35px;
+}
+.p-recruit-info__inner {
+  padding: 0 20px;
+}
+
+.p-recruit-info__job-list {
+  display: flex;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.p-recruit-info__job {
+  border: 1px solid $border-color;
+  border-radius: 10px;
+  padding: 28px 20px;
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+.p-recruit-info__job-card {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.p-recruit-info__term {
+  width: 100%;
+  padding-bottom: 6px;
+  @include mix.hiragino-w6;
+}
+
+.p-recruit-info__description {
+  width: 100%;
+  border-bottom: 1px solid $devider-color;
+  padding-bottom: 21px;
+  margin-bottom: 18px;
+  @include mix.montserrat-regular;
+}
+
+.p-recruit-info__candidate-profile {
+  margin-top: 15px;
+}
+
+.p-recruit-info__example {
+  position: relative;
+  margin-left: 14px;
+  margin-bottom: 6px;
+}
+
+.p-recruit-info__example::before {
+  content: '・';
+  position: absolute;
+  top: 0;
+  left: -1rem;
+}
+
+.p-recruit-info__button-wrapper {
+  margin: 0 auto;
+}
+
+.p-recruit-info__notice {
+  @include mix.montserrat-regular;
+  font-size: 12px;
+  margin-top: 3px;
+  text-align: center;
+}
+.p-recruit-video {
+  padding: 40px 0;
+}
+.p-recruit-video__inner {
+  padding: 0 20px;
+}
+.p-recruit-video__image-wrapper img {
+  width: 100%;
+  vertical-align: bottom;
+}
+@media screen and (min-width: 768px) {
+  .l-main__inner {
+    max-width: none;
+  }
+  .p-recruit-message {
+    margin: 70px 0;
+  }
+  .p-recruit-info {
+    padding-bottom: 80px;
+  }
+  .p-recruit-info__inner {
+    max-width: 1110px;
+    margin: 0 auto;
+  }
+  .p-recruit-info__job-card {
+    padding: 58px 95px;
+  }
+  .p-recruit-info__term {
+    width: calc(30% - 30px);
+    padding-left: 30px;
+    border-bottom: 1px solid $devider-color;
+    padding-bottom: 28px;
+    margin-bottom: 30px;
+  }
+  .p-recruit-info__description {
+    width: calc(70% - 30px);
+    padding-right: 30px;
+    padding-bottom: 28px;
+    margin-bottom: 30px;
+  }
+  .p-recruit-video {
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: 50px 0;
+  }
+  .p-recruit-video__inner {
+    padding: 0;
+  }
+}

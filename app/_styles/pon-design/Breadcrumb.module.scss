@@ -1,0 +1,48 @@
+@charset "utf-8";
+@use './config/mixin' as mix;
+
+.c-breadcrumb {
+  background-color: var(--light-gray);
+  padding: 5px 20px;
+}
+
+.c-breadcrumb__list {
+  display: flex;
+  align-items: center;
+  max-width: 90%;
+}
+
+.c-breadcrumb__item {
+  white-space: nowrap;
+}
+
+.c-breadcrumb__item:nth-child(3) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.c-breadcrumb__place {
+  @include mix.montserrat-regular;
+  font-size: 11px;
+  overflow: hidden;
+}
+
+.c-breadcrumb__place--other {
+  color: var(--primary);
+}
+
+.c-breadcrumb__place--other::after {
+  content: '>';
+  color: var(--font-color);
+  margin: 0 8px;
+}
+
+.c-breadcrumb__place--now {
+  color: var(--font-color);
+}
+
+@media screen and (min-width: 768px) {
+  .c-breadcrumb {
+    padding: 15px 165px;
+  }
+}

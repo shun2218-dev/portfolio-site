@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* main */
+.l-main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.l-main__inner {
+  width: 100%;
+  z-index: 5;
+  position: relative;
+}
+
+.l-main--recruit {
+  background-image: url(/images/pon-design/bg-geometry.png);
+}
+
+@media screen and (min-width: 768px) {
+  .l-main__inner {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}

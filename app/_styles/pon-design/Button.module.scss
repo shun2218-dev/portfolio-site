@@ -1,0 +1,46 @@
+@charset "utf-8";
+@use './config/mixin' as mix;
+/* button */
+.c-button {
+  background-image: var(--button-bg-gradation);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px auto 0;
+  border-radius: 48px;
+  text-align: center;
+  padding: 18px 0;
+  width: 200px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.c-button a,
+.c-button button {
+  color: #ffffff;
+  @include mix.montserrat-bold;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.c-button.c-button--outlined {
+  background-image: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 28px;
+  border: 1px solid #ffffff;
+  border-radius: 48px;
+  text-align: center;
+  width: 220px;
+}
+.c-button.c-button--outlined a {
+  @include mix.montserrat-bold;
+  display: inline-block;
+  padding: 18px 70px;
+}
+
+@media screen and (min-width: 768px) {
+  .c-button.c-button--outlined {
+    margin: 47px auto;
+  }
+}
