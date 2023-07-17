@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { decodeBase64 } from '~/lib/buffer'
 
 // For production use only
-const matcher = ['/((?!api|_next/static|_next/image|favicon.ico).*)']
+const matcher = ['/', '/pon-design/*']
 export const config = {
   matcher,
 }
