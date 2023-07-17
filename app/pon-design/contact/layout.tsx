@@ -3,7 +3,7 @@ import { FC, ReactNode } from 'react'
 
 const siteName = 'CONTACT'
 const description = 'This page is a contact page of PON DESIGN'
-const url = `${process.env.SITE_URL_PON}/contact`
+const url = `${process.env.NEXT_PUBLIC_SITE_URL_PON}/contact`
 
 export const metadata: Metadata = {
   title: siteName,
