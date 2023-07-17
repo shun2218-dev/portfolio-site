@@ -16,7 +16,7 @@ const fetcher = async (url: string) => {
 
 const NewsListPage = () => {
   const [newsInfo, setNewsInfo] = useState<NewsInfo[]>([])
-  const { mutate, data, error, isLoading, isValidating } = useSWR('/api/news', fetcher)
+  const { mutate, data, error, isLoading, isValidating } = useSWR('/api/pon-design/news', fetcher)
 
   useEffect(() => {
     if (data && !isLoading) setNewsInfo([...data])

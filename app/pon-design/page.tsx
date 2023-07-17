@@ -36,7 +36,7 @@ const fetcher = async (url: string) => {
 
 const TopPageMemo = () => {
   const [imagePaths, setImagePaths] = useState<SwiperImagePath[]>([])
-  const { data, error, isLoading } = useSWR('/api', fetcher)
+  const { data, error, isLoading } = useSWR('/api/pon-design', fetcher)
   if (error) throw new Error(error.message)
 
   useEffect(() => {
