@@ -5,7 +5,9 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <main className={styles.main}>
-      <Link href="/pon-design">pon design</Link>
+      <Link href="/pon-design" target="_blank">
+        pon design
+      </Link>
     </main>
   )
 }
