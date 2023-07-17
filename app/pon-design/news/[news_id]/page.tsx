@@ -1,7 +1,5 @@
 'use client'
-import { Hero } from '~/components/pon-design/Hero'
 import styles from '~/styles/pon-design/NewsDetail.module.scss'
-import mainStyles from '~/styles/pon-design/Main.module.scss'
 import type { NewsDetailInfo } from '~/types/pon-design'
 import { useEffect, useState } from 'react'
 import { NewsDetail } from '~/components/pon-design/NewsDetail'
@@ -19,7 +17,7 @@ const fetcher = async (url: string) => {
 const NewsDetailPage = () => {
   const params = useParams()
   const [newsDatailData, setNewsDatailData] = useState<NewsDetailInfo | null>(null)
-  const { data, error, isLoading, isValidating } = useSWR(`/api/news/detail?news_id=${params.news_id}`, fetcher)
+  const { data, error, isLoading, isValidating } = useSWR(`/api/pon-design/news/detail?news_id=${params.news_id}`, fetcher)
   if (error) throw new Error(error.message)
 
   useEffect(() => {
