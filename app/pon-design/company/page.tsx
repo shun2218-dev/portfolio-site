@@ -36,9 +36,25 @@ const CompanyPage = () => {
           <div className={styles['p-company-message__from-ceo']}>
             <div className={styles['p-company-message__image-wrapper']}>
               {breakpoint === 'smartphone' ? (
-                <Image src="/images/pon-design/company_message.png" alt="CEO" width={335} height={248} style={{ objectFit: 'contain', height: 'auto' }} />
+                <Image
+                  src="/images/pon-design/company_message.png"
+                  alt="CEO"
+                  width={335}
+                  height={248}
+                  style={{ objectFit: 'contain', height: 'auto' }}
+                  placeholder="blur"
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
+                />
               ) : (
-                <Image src="/images/pon-design/company_message_pc.png" alt="CEO" width={445} height={330} style={{ objectFit: 'contain', height: 'auto' }} />
+                <Image
+                  src="/images/pon-design/company_message_pc.png"
+                  alt="CEO"
+                  width={445}
+                  height={330}
+                  style={{ objectFit: 'contain', height: 'auto' }}
+                  placeholder="blur"
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
+                />
               )}
             </div>
             <div className={styles['p-company-message__text-wrapper']}>
@@ -70,9 +86,27 @@ const CompanyPage = () => {
           </dl>
 
           {breakpoint === 'smartphone' ? (
-            <Image src="/images/pon-design/company_map.png" alt="google map" className={styles['p-company-info__map']} width={335} height={240} style={{ objectFit: 'contain', height: 'auto' }} />
+            <Image
+              src="/images/pon-design/company_map.png"
+              alt="google map"
+              className={styles['p-company-info__map']}
+              width={335}
+              height={240}
+              style={{ objectFit: 'contain', height: 'auto' }}
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
+            />
           ) : (
-            <Image src="/images/pon-design/company_map_pc.png" alt="google map" className={styles['p-company-info__map']} width={1110} height={394} style={{ objectFit: 'contain', height: 'auto' }} />
+            <Image
+              src="/images/pon-design/company_map_pc.png"
+              alt="google map"
+              className={styles['p-company-info__map']}
+              width={1110}
+              height={394}
+              style={{ objectFit: 'contain', height: 'auto' }}
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
+            />
           )}
 
           <Link href="#" className={styles['p-company-info__map-link']}>
