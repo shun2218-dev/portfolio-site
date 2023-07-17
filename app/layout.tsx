@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 const siteName = 'Portfolio Site'
 const description = 'Here is a portfolio site created using Next.js.'
-const url = process.env.SITE_URL
+const url = process.env.NEXT_PUBLIC_SITE_URL
 
 export const metadata: Metadata = {
   title: siteName,

@@ -8,7 +8,7 @@ export async function generateMetadata({ params }: Omit<MetaProps, 'searchParams
   const data: NewsDetailInfo = await response.json()
 
   const siteName = data.title
-  const url = `${process.env.SITE_URL_PON}/news/${params.news_id}`
+  const url = `${process.env.NEXT_PUBLIC_SITE_URL_PON}/news/${params.news_id}`
   const description = 'This page is a news article page of PON DESIGN'
 
   return {
