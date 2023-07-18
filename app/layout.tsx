@@ -37,7 +37,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="ja">
       <body className={inter.className}>
         <head>
-          // eslint-disable-next-line @next/next/no-sync-scripts
           <script data-project-id="EQGJ0NHInxlvlN9tWDd1FXolzpxSIUNbceA57XQK" src="https://snippet.meticulous.ai/v1/meticulous.js" />
         </head>
         {children}
