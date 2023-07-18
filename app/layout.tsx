@@ -34,6 +34,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja">
+      <head>
+        <script data-project-id="EQGJ0NHInxlvlN9tWDd1FXolzpxSIUNbceA57XQK" src="https://snippet.meticulous.ai/v1/meticulous.js"></script>
+        {/* Meticulous snippet should be added before your app */}
+        ...
+        <script src="main_app.js"></script>
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )
