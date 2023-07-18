@@ -2,9 +2,9 @@ import { NextRequest, NextResponse } from 'next/server'
 import { decodeBase64 } from '~/lib/buffer'
 
 // For production use only
-const matcher = ['/', '/pon-design/*']
+
 export const config = {
-  matcher,
+  matcher: ['/', '/pon-design/:path*'],
 }
 
 export function middleware(req: NextRequest) {

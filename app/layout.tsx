@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -34,13 +35,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja">
-      <head>
-        <script data-project-id="EQGJ0NHInxlvlN9tWDd1FXolzpxSIUNbceA57XQK" src="https://snippet.meticulous.ai/v1/meticulous.js"></script>
-        {/* Meticulous snippet should be added before your app */}
-        ...
-        <script src="main_app.js"></script>
-      </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <head>
+          <script data-project-id="EQGJ0NHInxlvlN9tWDd1FXolzpxSIUNbceA57XQK" src="https://snippet.meticulous.ai/v1/meticulous.js" />
+        </head>
+        {children}
+        <Analytics />
+      </body>
     </html>
   )
 }
