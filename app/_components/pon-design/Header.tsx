@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import { FC, memo, useEffect } from 'react'
+import { FC, memo, useEffect, useMemo } from 'react'
 import styles from '~/styles/pon-design/Header.module.scss'
 import { useElementHeight } from '~/app/_hooks/useElementHeight'
 import { createBreakpoint, useToggle, useWindowScroll } from 'react-use'
@@ -17,6 +17,15 @@ const HeaderMemo: FC<Props> = ({ font }) => {
   const { el, DOMRect } = useElementHeight()
   const { y } = useWindowScroll()
   const [on, toggle] = useToggle(false)
+  const isNavHidden = useMemo(() => {
+    if (!(breakpoint === 'tablet' || breakpoint === 'smartphone')) {
+      return false
+    } else if (on) {
+      return false
+    } else {
+      return true
+    }
+  }, [breakpoint, on])
   useEffect(() => {
     if (breakpoint !== 'smartphone') {
       toggle(false)
@@ -53,7 +62,7 @@ const HeaderMemo: FC<Props> = ({ font }) => {
           </button>
         )}
       </div>
-      <nav className={[styles['l-header__nav']].join(' ')} id="header-nav" aria-hidden={!on}>
+      <nav className={[styles['l-header__nav']].join(' ')} id="header-nav" aria-hidden={isNavHidden}>
         <ul className={styles['l-header__nav-menu']}>
           <li className={styles['l-header__nav-item']}>
             <Link href="/pon-design/news" className={styles['l-header__nav-link']}>
