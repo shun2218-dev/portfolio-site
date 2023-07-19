@@ -26,7 +26,7 @@ const Button: FC<Props> = ({ id, ariaLabel, label, href, type, onClick, variant 
     }
   }
   return (
-    <div className={[styles['c-button'], variantStyle()].join(' ')} role={href ? 'link' : type ? 'button' : ''}>
+    <div className={[styles['c-button'], variantStyle()].join(' ')}>
       {href && <Link href={href}>{label}</Link>}
       {type && (
         <button type={type} onClick={onClick} id={id} aria-label={ariaLabel} title={ariaLabel}>
