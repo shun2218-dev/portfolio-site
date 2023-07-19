@@ -40,12 +40,20 @@ const HeaderMemo: FC<Props> = ({ font }) => {
           </a>
         </h1>
         {(breakpoint === 'tablet' || breakpoint === 'smartphone') && (
-          <button className={[styles['l-header__nav-button']].join(' ')} data-is-visible={breakpoint === 'tablet' || breakpoint === 'smartphone' ? true : false} onClick={toggle}>
+          <button
+            className={[styles['l-header__nav-button']].join(' ')}
+            data-is-visible={breakpoint === 'tablet' || breakpoint === 'smartphone' ? true : false}
+            onClick={toggle}
+            id="header-nav-button"
+            aria-label="navigation button"
+            aria-controls="header-nav"
+            aria-expanded={on}
+          >
             <span className={styles['l-header__nav-button-bar']}></span>
           </button>
         )}
       </div>
-      <nav className={[styles['l-header__nav']].join(' ')}>
+      <nav className={[styles['l-header__nav']].join(' ')} id="header-nav" aria-hidden={!on}>
         <ul className={styles['l-header__nav-menu']}>
           <li className={styles['l-header__nav-item']}>
             <Link href="/pon-design/news" className={styles['l-header__nav-link']}>

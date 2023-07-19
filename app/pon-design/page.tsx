@@ -94,7 +94,7 @@ const TopPageMemo = () => {
             </span>
           </h2>
 
-          <Button label={'CONTACT'} href={'/pon-design/contact'} variant={'outlined'} />
+          <Button label={'CONTACT'} href={'/pon-design/contact'} variant={'outlined'} id="top-hero-contact" ariaLabel="Page transition to contact page" />
         </div>
       </section>
       <PageLayout>
@@ -197,7 +197,7 @@ const TopPageMemo = () => {
                 <p className={styles['p-top-service__item-text']}>スマートフォンアプリ開発の他、Vue.jsやReactによるWebアプリの開発が可能です。</p>
               </li>
             </ul>
-            <Button label={'MORE'} href={'/pon-design/service'} />
+            <Button label={'MORE'} href={'/pon-design/service'} id={'moreService'} ariaLabel={'Page transition to service page'} />
           </div>
         </section>
         <section className={[styles['p-top-works'], 'js-works'].join(' ')} style={sliderStyle?.section}>
@@ -258,7 +258,7 @@ const TopPageMemo = () => {
                 <p className={styles['p-top-works__text']}>様々なジャンルのWebサイト制作が可能です。</p>
                 <p className={styles['p-top-works__text']}>ご購入やお申込み数の増加などを実現します！</p>
               </div>
-              <Button label={'MORE'} href={'/pon-design/works'} />
+              <Button label={'MORE'} href={'/pon-design/works'} id={'moreWorks'} ariaLabel={'Page transition to works page'} />
             </div>
           </div>
         </section>
@@ -284,7 +284,7 @@ const TopPageMemo = () => {
               <span className={styles['p-top-company__slogan-text']}>お客様の笑顔を見たい。</span>
               <span className={styles['p-top-company__slogan-text']}>夢を実現する手助けをさせてください。</span>
             </p>
-            <Button label={'MORE'} href={'/pon-design/company'} />
+            <Button label={'MORE'} href={'/pon-design/company'} id={'moreCompany'} ariaLabel={'Page transition to company page'} />
           </div>
         </section>
         <section className={styles['p-top-recruit']}>
@@ -319,7 +319,7 @@ const TopPageMemo = () => {
             <div className={styles['p-top-recruit__container']}>
               <Title title={'RECRUIT'} subTitle={'採用情報'} className={'c-title--section'} />
               <p className={styles['p-top-recruit__text']}>私たちと一緒に働きませんか？</p>
-              <Button label={'MORE'} href={'/pon-design/recruit'} />
+              <Button label={'MORE'} href={'/pon-design/recruit'} id={'moreRecruit'} ariaLabel={'Page transition to recruit page'} />
             </div>
           </div>
         </section>
