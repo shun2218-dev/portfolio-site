@@ -3,6 +3,8 @@ import React, { FC, useMemo } from 'react'
 import styles from '~/styles/pon-design/Button.module.scss'
 
 type Props = {
+  id: string
+  ariaLabel: string
   label: string
   href?: string
   type?: 'button' | 'submit'
@@ -10,7 +12,7 @@ type Props = {
   variant?: 'contained' | 'outlined' | 'text'
 }
 
-const Button: FC<Props> = ({ label, href, type, onClick, variant = 'contained' }) => {
+const Button: FC<Props> = ({ id, ariaLabel, label, href, type, onClick, variant = 'contained' }) => {
   const variantStyle = () => {
     switch (variant) {
       case 'contained':
@@ -24,10 +26,10 @@ const Button: FC<Props> = ({ label, href, type, onClick, variant = 'contained' }
     }
   }
   return (
-    <div className={[styles['c-button'], variantStyle()].join(' ')}>
+    <div className={[styles['c-button'], variantStyle()].join(' ')} role={href ? 'link' : type ? 'button' : ''}>
       {href && <Link href={href}>{label}</Link>}
       {type && (
-        <button type={type} onClick={onClick}>
+        <button type={type} onClick={onClick} id={id} aria-label={ariaLabel} title={ariaLabel}>
           {label}
         </button>
       )}
