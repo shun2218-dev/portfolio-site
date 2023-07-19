@@ -36,7 +36,7 @@ const fetcher = async (url: string) => {
 
 const TopPageMemo = () => {
   const [imagePaths, setImagePaths] = useState<SwiperImagePath[]>([])
-  const { data, error, isLoading } = useSWR('/api', fetcher)
+  const { data, error, isLoading } = useSWR('/api/pon-design', fetcher)
   if (error) throw new Error(error.message)
 
   useEffect(() => {
@@ -94,7 +94,7 @@ const TopPageMemo = () => {
             </span>
           </h2>
 
-          <Button label={'CONTACT'} href={'/pon-design/contact'} variant={'outlined'} />
+          <Button label={'CONTACT'} href={'/pon-design/contact'} variant={'outlined'} id="top-hero-contact" ariaLabel="Page transition to contact page" />
         </div>
       </section>
       <PageLayout>
@@ -157,6 +157,8 @@ const TopPageMemo = () => {
                     width={335}
                     height={210}
                     style={{ objectFit: 'contain', aspectRatio: 1.59 }}
+                    placeholder="blur"
+                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
                   />
                 </div>
                 <h3 className={[styles['p-top-service__item-title'], 'u-fs18'].join(' ')}>Webサイト制作</h3>
@@ -171,6 +173,8 @@ const TopPageMemo = () => {
                     width={335}
                     height={210}
                     style={{ objectFit: 'contain', aspectRatio: 1.59 }}
+                    placeholder="blur"
+                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
                   />
                 </div>
                 <h3 className={[styles['p-top-service__item-title'], 'u-fs18'].join(' ')}>Webサイト運用</h3>
@@ -185,13 +189,15 @@ const TopPageMemo = () => {
                     width={335}
                     height={210}
                     style={{ objectFit: 'contain', aspectRatio: 1.59 }}
+                    placeholder="blur"
+                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
                   />
                 </div>
                 <h3 className={[styles['p-top-service__item-title'], 'u-fs18'].join(' ')}>アプリ開発</h3>
                 <p className={styles['p-top-service__item-text']}>スマートフォンアプリ開発の他、Vue.jsやReactによるWebアプリの開発が可能です。</p>
               </li>
             </ul>
-            <Button label={'MORE'} href={'/pon-design/service'} />
+            <Button label={'MORE'} href={'/pon-design/service'} id={'moreService'} ariaLabel={'Page transition to service page'} />
           </div>
         </section>
         <section className={[styles['p-top-works'], 'js-works'].join(' ')} style={sliderStyle?.section}>
@@ -217,6 +223,8 @@ const TopPageMemo = () => {
                             width={750}
                             height={510}
                             style={{ objectFit: 'contain', aspectRatio: 1.47, height: 'auto' }}
+                            placeholder="blur"
+                            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
                           />
                         </SwiperSlide>
                       ) : (
@@ -227,6 +235,8 @@ const TopPageMemo = () => {
                             width={335}
                             height={210}
                             style={{ objectFit: 'cover', aspectRatio: 1.47, height: 'auto', verticalAlign: 'bottom' }}
+                            placeholder="blur"
+                            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
                           />
                         </SwiperSlide>
                       )
@@ -248,7 +258,7 @@ const TopPageMemo = () => {
                 <p className={styles['p-top-works__text']}>様々なジャンルのWebサイト制作が可能です。</p>
                 <p className={styles['p-top-works__text']}>ご購入やお申込み数の増加などを実現します！</p>
               </div>
-              <Button label={'MORE'} href={'/pon-design/works'} />
+              <Button label={'MORE'} href={'/pon-design/works'} id={'moreWorks'} ariaLabel={'Page transition to works page'} />
             </div>
           </div>
         </section>
@@ -274,7 +284,7 @@ const TopPageMemo = () => {
               <span className={styles['p-top-company__slogan-text']}>お客様の笑顔を見たい。</span>
               <span className={styles['p-top-company__slogan-text']}>夢を実現する手助けをさせてください。</span>
             </p>
-            <Button label={'MORE'} href={'/pon-design/company'} />
+            <Button label={'MORE'} href={'/pon-design/company'} id={'moreCompany'} ariaLabel={'Page transition to company page'} />
           </div>
         </section>
         <section className={styles['p-top-recruit']}>
@@ -289,6 +299,8 @@ const TopPageMemo = () => {
                   height={140}
                   sizes="100vw"
                   style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                  placeholder="blur"
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
                 />
               ) : (
                 <Image
@@ -299,13 +311,15 @@ const TopPageMemo = () => {
                   height={332}
                   sizes="100vw"
                   style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                  placeholder="blur"
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
                 />
               )}
             </div>
             <div className={styles['p-top-recruit__container']}>
               <Title title={'RECRUIT'} subTitle={'採用情報'} className={'c-title--section'} />
               <p className={styles['p-top-recruit__text']}>私たちと一緒に働きませんか？</p>
-              <Button label={'MORE'} href={'/pon-design/recruit'} />
+              <Button label={'MORE'} href={'/pon-design/recruit'} id={'moreRecruit'} ariaLabel={'Page transition to recruit page'} />
             </div>
           </div>
         </section>

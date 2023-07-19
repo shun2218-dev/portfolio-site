@@ -1,15 +1,15 @@
 import { Metadata } from 'next'
 import { FC, ReactNode } from 'react'
-import { getNewsTitle } from '~/lib/getNewsTitle'
-import { MetaProps } from '~/types/pon-design'
-
+import { MetaProps, NewsDetailInfo } from '~/types/pon-design'
 export async function generateMetadata({ params }: Omit<MetaProps, 'searchParams'>): Promise<Metadata> {
   const news_id = params.news_id
-  const { fetchHandler } = getNewsTitle()
-  const result = await fetchHandler(news_id)
-  const siteName = result.title
-  const url = `${process.env.SITE_URL_PON}/news/${params.news_id}`
-  const description = ''
+  const API_URL = `${process.env.NEXT_PUBLIC_SITE_URL_PON}/news/detail?news_id=${news_id}`
+  const response = await fetch(API_URL)
+  const data: NewsDetailInfo = await response.json()
+
+  const siteName = data.title
+  const url = `${process.env.NEXT_PUBLIC_SITE_URL_PON}/news/${params.news_id}`
+  const description = 'This page is a news article page of PON DESIGN'
 
   return {
     title: `${siteName} | PON DESIGN`,

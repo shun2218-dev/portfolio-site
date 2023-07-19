@@ -10,12 +10,15 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 
   return (
     <div>
-      <h2>Something went wrong!</h2>
+      <h2 id="error-page">Something went wrong!</h2>
       <button
         onClick={
           // Attempt to recover by trying to re-render the segment
           () => reset()
         }
+        id="error_back-to-top"
+        aria-label="Back to top page from error page"
+        aria-labelledby="error-page"
       >
         Try again
       </button>

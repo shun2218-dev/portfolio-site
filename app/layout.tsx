@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react'
 
 const inter = Inter({ subsets: ['latin'] })
 
 const siteName = 'Portfolio Site'
-const description = ''
-const url = process.env.SITE_URL
+const description = 'Here is a portfolio site created using Next.js.'
+const url = process.env.NEXT_PUBLIC_SITE_URL
 
 export const metadata: Metadata = {
   title: siteName,
@@ -34,7 +35,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <head>
+          <script data-project-id="EQGJ0NHInxlvlN9tWDd1FXolzpxSIUNbceA57XQK" src="https://snippet.meticulous.ai/v1/meticulous.js" />
+        </head>
+        {children}
+        <Analytics />
+      </body>
     </html>
   )
 }

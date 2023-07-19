@@ -28,9 +28,27 @@ const RecruitPage = () => {
         </div>
         <div className={styles['p-recruit-message__image-wrapper']}>
           {breakpoint === 'smartphone' ? (
-            <Image src="/images/pon-design/recruit.png" alt="" className="p-recruit-message__image" width={375} height={290} style={{ objectFit: 'contain', height: 'auto', width: '100%' }} />
+            <Image
+              src="/images/pon-design/recruit.png"
+              alt=""
+              className="p-recruit-message__image"
+              width={375}
+              height={290}
+              style={{ objectFit: 'contain', height: 'auto', width: '100%' }}
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
+            />
           ) : (
-            <Image src="/images/pon-design/recruit_pc.png" alt="" className="p-recruit-message__image" width={1440} height={780} style={{ objectFit: 'contain', height: 'auto', width: '100%' }} />
+            <Image
+              src="/images/pon-design/recruit_pc.png"
+              alt=""
+              className="p-recruit-message__image"
+              width={1440}
+              height={780}
+              style={{ objectFit: 'contain', height: 'auto', width: '100%' }}
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
+            />
           )}
         </div>
       </section>
@@ -60,7 +78,7 @@ const RecruitPage = () => {
                   </ul>
                 </dd>
                 <div className={styles['p-recruit-info__button-wrapper']}>
-                  <Button label={'応募する'} href={'#'} />
+                  <Button label={'応募する'} href={'#'} id={'recruit-apply'} ariaLabel={'Apply this job'} />
                   <p className={styles['p-recruit-info__notice']}>求人サイトへ遷移します</p>
                 </div>
               </dl>
@@ -73,9 +91,25 @@ const RecruitPage = () => {
           <Title title={'社内ムービー'} className={['c-title--section', 'c-title--thin', 'c-title--sm']} />
           <div className={styles['p-recruit-video__image-wrapper']}>
             {breakpoint === 'smartphone' ? (
-              <Image src="/images/pon-design/recruit_video.png" alt="" width={335} height={188} style={{ objectFit: 'contain', height: 'auto' }} />
+              <Image
+                src="/images/pon-design/recruit_video.png"
+                alt=""
+                width={335}
+                height={188}
+                style={{ objectFit: 'contain', height: 'auto' }}
+                placeholder="blur"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
+              />
             ) : (
-              <Image src="/images/pon-design/recruit_video_pc.png" alt="" width={1110} height={624} style={{ objectFit: 'contain', height: 'auto' }} />
+              <Image
+                src="/images/pon-design/recruit_video_pc.png"
+                alt=""
+                width={1110}
+                height={624}
+                style={{ objectFit: 'contain', height: 'auto' }}
+                placeholder="blur"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
+              />
             )}
           </div>
         </div>

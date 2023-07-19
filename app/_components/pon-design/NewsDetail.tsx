@@ -27,9 +27,27 @@ const NewsDetailMemo: FC<Props> = ({ title, dateTime, label }) => {
           </div>
         </div>
         {breakpoint === 'smartphone' ? (
-          <Image src="/images/pon-design/article.png" alt="" className={styles['p-detail-content__image']} width={335} height={187} style={{ objectFit: 'cover', height: 'auto' }} />
+          <Image
+            src="/images/pon-design/article.png"
+            alt=""
+            className={styles['p-detail-content__image']}
+            width={335}
+            height={187}
+            style={{ objectFit: 'cover', height: 'auto' }}
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
+          />
         ) : (
-          <Image src="/images/pon-design/article_pc.png" alt="" className={styles['p-detail-content__image']} width={750} height={400} style={{ objectFit: 'cover', height: 'auto' }} />
+          <Image
+            src="/images/pon-design/article_pc.png"
+            alt=""
+            className={styles['p-detail-content__image']}
+            width={750}
+            height={400}
+            style={{ objectFit: 'cover', height: 'auto' }}
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
+          />
         )}
         <div className={styles['p-detail-content__prologue-wrapper']}>
           <p className={styles['p-detail-content__prologue']}>テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>

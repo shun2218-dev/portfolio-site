@@ -3,8 +3,8 @@ import { Metadata } from 'next'
 import { SiteLayout } from '~/components/pon-design/SiteLayout'
 
 const siteName = 'PON DESIGN'
-const description = ''
-const url = process.env.SITE_URL_PON
+const description = 'PON DESIGN is a fictitious website. This website was created using design comps that can be used as a free portfolio.'
+const url = process.env.NEXT_PUBLIC_SITE_URL_PON
 
 export const metadata: Metadata = {
   title: {

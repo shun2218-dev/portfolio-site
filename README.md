@@ -33,4 +33,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-## Test by Playwright
+
+## E2E test by Playwright and Meticulous AI.
+
+The E2E test will run automatically when pull requests are received by Playwright and Meticulous AI.

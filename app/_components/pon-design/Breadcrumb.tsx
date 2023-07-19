@@ -22,7 +22,7 @@ const BreadcrumbMemo = () => {
   const pathname = usePathname()
   const params = useParams()
   const [newsTitle, setNewsTitle] = useState<string | null>(null)
-  const { data } = useSWR(`/api/news/detail?news_id=${params.news_id}`, fetcher)
+  const { data } = useSWR(`/api/pon-design/news/detail?news_id=${params.news_id}`, fetcher)
   const breadcrumb: Breadcrumb[] = useMemo(() => {
     return pathname
       .split('/')
@@ -38,7 +38,10 @@ const BreadcrumbMemo = () => {
       <ul className={styles['c-breadcrumb__list']}>
         {breadcrumb.map((page, index) => (
           <li className={styles['c-breadcrumb__item']} key={page.label}>
-            <Link href={page.href} className={[styles['c-breadcrumb__place'], index === breadcrumb.length - 1 ? styles['c-breadcrumb__place--now'] : styles['c-breadcrumb__place--other']].join(' ')}>
+            <Link
+              href={index === breadcrumb.length - 1 ? '#' : page.href}
+              className={[styles['c-breadcrumb__place'], index === breadcrumb.length - 1 ? styles['c-breadcrumb__place--now'] : styles['c-breadcrumb__place--other']].join(' ')}
+            >
               {page.label}
             </Link>
           </li>

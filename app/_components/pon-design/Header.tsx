@@ -23,7 +23,7 @@ const HeaderMemo: FC<Props> = ({ font }) => {
     }
   }, [breakpoint, on, toggle])
   return (
-    <header className={[styles['l-header'], font.className].join(' ')} ref={el} data-is-fixed={y > DOMRect?.height! ? true : false} data-is-open={on} onClick={toggle}>
+    <header className={[styles['l-header'], font.className].join(' ')} ref={el} data-is-fixed={y > DOMRect?.height! ? true : false} data-is-open={on}>
       <div className={styles['l-header__inner']}>
         <h1 className={styles['l-header__logo']}>
           <a href="/pon-design" className={styles['l-header__logo-link']}>
@@ -37,18 +37,23 @@ const HeaderMemo: FC<Props> = ({ font }) => {
                 fill="#fff"
               />
             </svg>
-
-            {/* <Image src="/images/pon-design/header-logo.svg" alt="PON DESIGN" width={124} height={42} className={styles['l-header__logo-image']} /> */}
           </a>
         </h1>
-        {breakpoint === 'tablet' ||
-          ('smartphone' && (
-            <button className={[styles['l-header__nav-button'], 'js-nav-button'].join(' ')} data-is-visible={breakpoint === 'tablet' ? true : false}>
-              <span className={styles['l-header__nav-button-bar']}></span>
-            </button>
-          ))}
+        {(breakpoint === 'tablet' || breakpoint === 'smartphone') && (
+          <button
+            className={[styles['l-header__nav-button']].join(' ')}
+            data-is-visible={breakpoint === 'tablet' || breakpoint === 'smartphone' ? true : false}
+            onClick={toggle}
+            id="header-nav-button"
+            aria-label="navigation button"
+            aria-controls="header-nav"
+            aria-expanded={on}
+          >
+            <span className={styles['l-header__nav-button-bar']}></span>
+          </button>
+        )}
       </div>
-      <nav className={[styles['l-header__nav'], 'js-nav'].join(' ')}>
+      <nav className={[styles['l-header__nav']].join(' ')} id="header-nav" aria-hidden={!on}>
         <ul className={styles['l-header__nav-menu']}>
           <li className={styles['l-header__nav-item']}>
             <Link href="/pon-design/news" className={styles['l-header__nav-link']}>
