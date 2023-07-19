@@ -48,7 +48,7 @@ const FooterMemo: FC<Props> = ({ font }) => {
           </li>
         </ul>
       </nav>
-      <button className={[styles['l-footer__scroll-button'], 'js-scroll-button'].join(' ')} onClick={scrollToTop}></button>
+      <button className={[styles['l-footer__scroll-button'], 'js-scroll-button'].join(' ')} onClick={scrollToTop} id={'scroll-to-top'} aria-label="scroll to page top"></button>
       <small className={styles['l-footer__copyright']}>&copy;PON DESIGN</small>
     </footer>
   )

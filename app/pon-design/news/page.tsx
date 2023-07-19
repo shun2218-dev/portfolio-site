@@ -36,15 +36,19 @@ const NewsListPage = () => {
           <div className={styles['p-news-article__pager']}>
             <ul className={styles['p-news-article__pager-list']}>
               <li>
-                <button className={styles['p-news-article__pager-button']} data-is-active="true">
+                <button className={styles['p-news-article__pager-button']} data-is-active="true" id="news-pager__1" aria-label="News pager page 1">
                   1
                 </button>
               </li>
               <li>
-                <button className={styles['p-news-article__pager-button']}>2</button>
+                <button className={styles['p-news-article__pager-button']} id="news-pager__2" aria-label="News pager page 2">
+                  2
+                </button>
               </li>
               <li>
-                <button className={styles['p-news-article__pager-button']}>3</button>
+                <button className={styles['p-news-article__pager-button']} id="news-pager__3" aria-label="News pager page 3">
+                  3
+                </button>
               </li>
             </ul>
           </div>

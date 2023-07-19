@@ -78,7 +78,7 @@ const ContactPage = () => {
                 <option value="5">その他</option>
               </select>
             </label>
-            <Button label={'送信する'} type={'submit'} />
+            <Button label={'送信する'} type={'submit'} id={'contact-form-submit'} ariaLabel={'Submit contact form'} />
           </form>
         </div>
       </section>

@@ -78,7 +78,7 @@ const RecruitPage = () => {
                   </ul>
                 </dd>
                 <div className={styles['p-recruit-info__button-wrapper']}>
-                  <Button label={'応募する'} href={'#'} />
+                  <Button label={'応募する'} href={'#'} id={'recruit-apply'} ariaLabel={'Apply this job'} />
                   <p className={styles['p-recruit-info__notice']}>求人サイトへ遷移します</p>
                 </div>
               </dl>

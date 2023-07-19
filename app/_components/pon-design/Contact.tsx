@@ -18,7 +18,7 @@ const ContactMemo: FC<Props> = ({ font }) => {
         お気軽にご相談ください。
       </p>
 
-      <Button label={'MORE'} href={'/pon-design/contact'} />
+      <Button label={'MORE'} href={'/pon-design/contact'} id={'contact-more'} ariaLabel={'Page transition to contact page'} />
     </section>
   )
 }
