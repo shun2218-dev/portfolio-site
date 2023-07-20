@@ -4,7 +4,7 @@ import styles from '~/styles/loading.module.scss'
 const Laoding = () => {
   return (
     <div className={styles['loading-wrapper']}>
-      <Spinner />
+      <Spinner color={'site-primary'} />
     </div>
   )
 }
