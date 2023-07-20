@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* color */
+:root {
+  --site-primary: #008080;
+  --footer-height: 0px;
+  --footer-height-pc: 0px;
+  --content-height: calc(100% - var(--header-height) - var(footer-height));
+  --content-height-pc: calc(100% - var(--header-height) - var(footer-height-pc));
+}

@@ -82,22 +82,25 @@ const TopPageMemo = () => {
 
   return (
     <>
-      <section className={styles['p-top-hero']}>
-        <div className={styles['p-top-hero__inner']}>
-          <h2 className={styles['p-top-hero__catch']}>
-            WEB DESIGN <br className="u-only-sp" />
-            SPECIALIST
-            <span className={styles['p-top-hero__sub-catch']}>
-              お客様の夢を叶える
-              <br className="u-only-sp" />
-              Webサイトを制作
-            </span>
-          </h2>
+      <PageLayout
+        heroArea={
+          <section className={styles['p-top-hero']}>
+            <div className={styles['p-top-hero__inner']}>
+              <h2 className={styles['p-top-hero__catch']}>
+                WEB DESIGN <br className="u-only-sp" />
+                SPECIALIST
+                <span className={styles['p-top-hero__sub-catch']}>
+                  お客様の夢を叶える
+                  <br className="u-only-sp" />
+                  Webサイトを制作
+                </span>
+              </h2>
 
-          <Button label={'CONTACT'} href={'/pon-design/contact'} variant={'outlined'} id="top-hero-contact" ariaLabel="Page transition to contact page" />
-        </div>
-      </section>
-      <PageLayout>
+              <Button label={'CONTACT'} href={'/pon-design/contact'} variant={'outlined'} id="top-hero-contact" ariaLabel="Page transition to contact page" />
+            </div>
+          </section>
+        }
+      >
         <section className={styles['p-top-news']}>
           <div className={styles['p-top-news__inner']}>
             <Title title={'NEWS'} subTitle={'お知らせ'} className={'c-title--section'} />

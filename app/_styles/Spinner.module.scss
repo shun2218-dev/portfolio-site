@@ -19,7 +19,7 @@
   -ms-transform: translateZ(0);
   transform: translateZ(0);
 }
-.loader:before {
+.loader::before {
   width: 50%;
   height: 50%;
   background: var(--primary);
@@ -29,7 +29,7 @@
   left: 0;
   content: '';
 }
-.loader:after {
+.loader::after {
   background: #ffffff;
   width: 75%;
   height: 75%;
@@ -41,6 +41,9 @@
   left: 0;
   bottom: 0;
   right: 0;
+}
+.loader--site-primary.loader::before {
+  background-color: var(--site-primary);
 }
 @-webkit-keyframes load3 {
   0% {
