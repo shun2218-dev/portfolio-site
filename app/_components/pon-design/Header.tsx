@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import { FC, memo, useEffect, useMemo } from 'react'
+import { FC, memo, useEffect, useMemo, useState } from 'react'
 import styles from '~/styles/pon-design/Header.module.scss'
 import { useElementHeight } from '~/app/_hooks/useElementHeight'
 import { createBreakpoint, useToggle, useWindowScroll } from 'react-use'
@@ -62,7 +62,7 @@ const HeaderMemo: FC<Props> = ({ font }) => {
           </button>
         )}
       </div>
-      <nav className={[styles['l-header__nav']].join(' ')} id="header-nav" aria-hidden={isNavHidden}>
+      <nav className={[styles['l-header__nav']].join(' ')} id="header-nav" aria-hidden={isNavHidden} title="header navigation">
         <ul className={styles['l-header__nav-menu']}>
           <li className={styles['l-header__nav-item']}>
             <Link href="/pon-design/news" className={styles['l-header__nav-link']}>

@@ -14,7 +14,7 @@ const FooterMemo: FC<Props> = ({ font }) => {
   }, [])
   return (
     <footer className={[styles['l-footer'], font.className].join(' ')}>
-      <nav className={styles['l-footer__nav']}>
+      <nav className={styles['l-footer__nav']} title="footer navigation">
         <ul className={styles['l-footer__nav-menu']}>
           <li className={styles['l-footer__nav-item']}>
             <Link href="/pon-design/news/" className={styles['l-footer__nav-link']}>

@@ -1,7 +1,12 @@
-import styles from '~/styles/pon-design/Spinner.module.scss'
+import { FC } from 'react'
+import styles from '~/styles/Spinner.module.scss'
 
-const Spinner = () => {
-  return <div className={styles.loader}>Loading...</div>
+type Props = {
+  color?: string
+}
+
+const Spinner: FC<Props> = ({ color = 'primary' }) => {
+  return <div className={[styles['loader'], styles[`loader--${color}`]].join(' ')}>Loading...</div>
 }
 
 export default Spinner

@@ -11,19 +11,19 @@ const montserrat = Montserrat({
 })
 type Props = {
   children: ReactNode
-  hero?: boolean
+  heroArea?: ReactNode
   contact?: boolean
   title?: string
   subTitle?: string
 }
-const PageLayout: FC<Props> = ({ children, hero, contact = true, title, subTitle }) => {
+const PageLayout: FC<Props> = ({ children, heroArea, contact = true, title, subTitle }) => {
   return (
     <>
       <main className={[styles['l-main'], montserrat.className].join(' ')}>
-        {title && subTitle && <Hero title={title} subTitle={subTitle} />}
+        {title && subTitle ? <Hero title={title} subTitle={subTitle} /> : heroArea}
         <div className={styles['l-main__inner']}>{children}</div>
+        {contact && <Contact font={montserrat} />}
       </main>
-      {contact && <Contact font={montserrat} />}
     </>
   )
 }
