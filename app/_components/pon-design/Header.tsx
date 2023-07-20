@@ -5,7 +5,6 @@ import styles from '~/styles/pon-design/Header.module.scss'
 import { useElementHeight } from '~/app/_hooks/useElementHeight'
 import { createBreakpoint, useToggle, useWindowScroll } from 'react-use'
 import { NextFont } from 'next/dist/compiled/@next/font'
-import { useScrollTop } from '~/app/_hooks/useScrollTop'
 
 const useBreakpoint = createBreakpoint({ laptopL: 1440, laptop: 1024, tablet: 768, smartphone: 560 })
 
