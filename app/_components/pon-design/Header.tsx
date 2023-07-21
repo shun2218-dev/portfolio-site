@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import { FC, memo, useEffect } from 'react'
+import { FC, memo, useEffect, useMemo, useState } from 'react'
 import styles from '~/styles/pon-design/Header.module.scss'
 import { useElementHeight } from '~/app/_hooks/useElementHeight'
 import { createBreakpoint, useToggle, useWindowScroll } from 'react-use'
@@ -17,6 +17,15 @@ const HeaderMemo: FC<Props> = ({ font }) => {
   const { el, DOMRect } = useElementHeight()
   const { y } = useWindowScroll()
   const [on, toggle] = useToggle(false)
+  const isNavHidden = useMemo(() => {
+    if (!(breakpoint === 'tablet' || breakpoint === 'smartphone')) {
+      return false
+    } else if (on) {
+      return false
+    } else {
+      return true
+    }
+  }, [breakpoint, on])
   useEffect(() => {
     if (breakpoint !== 'smartphone') {
       toggle(false)
@@ -26,7 +35,7 @@ const HeaderMemo: FC<Props> = ({ font }) => {
     <header className={[styles['l-header'], font.className].join(' ')} ref={el} data-is-fixed={y > DOMRect?.height! ? true : false} data-is-open={on}>
       <div className={styles['l-header__inner']}>
         <h1 className={styles['l-header__logo']}>
-          <a href="/pon-design" className={styles['l-header__logo-link']}>
+          <Link href="/pon-design" className={styles['l-header__logo-link']} data-pw="header-logo">
             <svg xmlns="http://www.w3.org/2000/svg" width="160.92" height="17.376" viewBox="0 0 160.92 17.376" className={styles['l-header__logo-image']}>
               <title>PON DESIGN</title>
               <path
@@ -37,7 +46,7 @@ const HeaderMemo: FC<Props> = ({ font }) => {
                 fill="#fff"
               />
             </svg>
-          </a>
+          </Link>
         </h1>
         {(breakpoint === 'tablet' || breakpoint === 'smartphone') && (
           <button
@@ -53,7 +62,7 @@ const HeaderMemo: FC<Props> = ({ font }) => {
           </button>
         )}
       </div>
-      <nav className={[styles['l-header__nav']].join(' ')} id="header-nav" aria-hidden={!on}>
+      <nav className={[styles['l-header__nav']].join(' ')} id="header-nav" aria-hidden={isNavHidden} title="header navigation">
         <ul className={styles['l-header__nav-menu']}>
           <li className={styles['l-header__nav-item']}>
             <Link href="/pon-design/news" className={styles['l-header__nav-link']}>

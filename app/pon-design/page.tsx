@@ -82,28 +82,30 @@ const TopPageMemo = () => {
 
   return (
     <>
-      <section className={styles['p-top-hero']}>
-        <div className={styles['p-top-hero__inner']}>
-          <h2 className={styles['p-top-hero__catch']}>
-            WEB DESIGN <br className="u-only-sp" />
-            SPECIALIST
-            <span className={styles['p-top-hero__sub-catch']}>
-              お客様の夢を叶える
-              <br className="u-only-sp" />
-              Webサイトを制作
-            </span>
-          </h2>
-
-          <Button label={'CONTACT'} href={'/pon-design/contact'} variant={'outlined'} id="top-hero-contact" ariaLabel="Page transition to contact page" />
-        </div>
-      </section>
-      <PageLayout>
+      <PageLayout
+        heroArea={
+          <section className={styles['p-top-hero']}>
+            <div className={styles['p-top-hero__inner']}>
+              <h1 className={styles['p-top-hero__catch']}>
+                WEB DESIGN <br className="u-only-sp" />
+                SPECIALIST
+                <span className={styles['p-top-hero__sub-catch']}>
+                  お客様の夢を叶える
+                  <br className="u-only-sp" />
+                  Webサイトを制作
+                </span>
+              </h1>
+              <Button label={'CONTACT'} href={'/pon-design/contact'} variant={'outlined'} id="hero-contact" ariaLabel="Page transition to contact page" />
+            </div>
+          </section>
+        }
+      >
         <section className={styles['p-top-news']}>
           <div className={styles['p-top-news__inner']}>
             <Title title={'NEWS'} subTitle={'お知らせ'} className={'c-title--section'} />
             <ul className={newsStyles['c-news__list']}>
               <li className={newsStyles['c-news__list-item']}>
-                <Link href="/pon-design/news/web-magazine" className={newsStyles['c-news__link']}>
+                <Link href="/pon-design/news/web-magazine" className={newsStyles['c-news__link']} data-pw="web-magazine">
                   <div className={newsStyles['c-news__header']}>
                     <time className={newsStyles['c-news__date']} dateTime="2030-02-01">
                       2030.02.01
@@ -112,7 +114,7 @@ const TopPageMemo = () => {
                       <span className={newsStyles['c-news__label-text']}>お知らせ</span>
                     </div>
                   </div>
-                  <h3 className={newsStyles['c-news__article-title']}>Webデザインニュースサイト「ウェブマガジン」に取材いただきました</h3>
+                  <h2 className={newsStyles['c-news__article-title']}>Webデザインニュースサイト「ウェブマガジン」に取材いただきました</h2>
                 </Link>
               </li>
               <li className={newsStyles['c-news__list-item']}>
@@ -125,7 +127,7 @@ const TopPageMemo = () => {
                       <span className={newsStyles['c-news__label-text']}>制作実績</span>
                     </div>
                   </div>
-                  <h3 className={newsStyles['c-news__article-title']}>Smoothiesta様のWebサイトを制作いたしました</h3>
+                  <h2 className={newsStyles['c-news__article-title']}>Smoothiesta様のWebサイトを制作いたしました</h2>
                 </Link>
               </li>
               <li className={newsStyles['c-news__list-item']}>
@@ -138,7 +140,7 @@ const TopPageMemo = () => {
                       <span className={newsStyles['c-news__label-text']}>採用</span>
                     </div>
                   </div>
-                  <h3 className={newsStyles['c-news__article-title']}>Webデザイナーを１名募集中です！</h3>
+                  <h2 className={newsStyles['c-news__article-title']}>Webデザイナーを１名募集中です！</h2>
                 </Link>
               </li>
             </ul>
@@ -161,7 +163,7 @@ const TopPageMemo = () => {
                     blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
                   />
                 </div>
-                <h3 className={[styles['p-top-service__item-title'], 'u-fs18'].join(' ')}>Webサイト制作</h3>
+                <h2 className={[styles['p-top-service__item-title'], 'u-fs18'].join(' ')}>Webサイト制作</h2>
                 <p className={styles['p-top-service__item-text']}>新規サイトの制作はもちろんサイトリニューアルやランディングページの制作も可能です。</p>
               </li>
               <li className={styles['p-top-service__list-item']}>
@@ -177,7 +179,7 @@ const TopPageMemo = () => {
                     blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
                   />
                 </div>
-                <h3 className={[styles['p-top-service__item-title'], 'u-fs18'].join(' ')}>Webサイト運用</h3>
+                <h2 className={[styles['p-top-service__item-title'], 'u-fs18'].join(' ')}>Webサイト運用</h2>
                 <p className={styles['p-top-service__item-text']}>サイトの更新作業や独自のアクセス解析に基づいたサイト改善のご提案をいたします。</p>
               </li>
               <li className={styles['p-top-service__list-item']}>
@@ -193,11 +195,11 @@ const TopPageMemo = () => {
                     blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
                   />
                 </div>
-                <h3 className={[styles['p-top-service__item-title'], 'u-fs18'].join(' ')}>アプリ開発</h3>
+                <h2 className={[styles['p-top-service__item-title'], 'u-fs18'].join(' ')}>アプリ開発</h2>
                 <p className={styles['p-top-service__item-text']}>スマートフォンアプリ開発の他、Vue.jsやReactによるWebアプリの開発が可能です。</p>
               </li>
             </ul>
-            <Button label={'MORE'} href={'/pon-design/service'} id={'moreService'} ariaLabel={'Page transition to service page'} />
+            <Button label={'MORE'} href={'/pon-design/service'} id={'more-service'} ariaLabel={'Page transition to service page'} />
           </div>
         </section>
         <section className={[styles['p-top-works'], 'js-works'].join(' ')} style={sliderStyle?.section}>
@@ -258,7 +260,7 @@ const TopPageMemo = () => {
                 <p className={styles['p-top-works__text']}>様々なジャンルのWebサイト制作が可能です。</p>
                 <p className={styles['p-top-works__text']}>ご購入やお申込み数の増加などを実現します！</p>
               </div>
-              <Button label={'MORE'} href={'/pon-design/works'} id={'moreWorks'} ariaLabel={'Page transition to works page'} />
+              <Button label={'MORE'} href={'/pon-design/works'} id={'more-works'} ariaLabel={'Page transition to works page'} />
             </div>
           </div>
         </section>
@@ -284,7 +286,7 @@ const TopPageMemo = () => {
               <span className={styles['p-top-company__slogan-text']}>お客様の笑顔を見たい。</span>
               <span className={styles['p-top-company__slogan-text']}>夢を実現する手助けをさせてください。</span>
             </p>
-            <Button label={'MORE'} href={'/pon-design/company'} id={'moreCompany'} ariaLabel={'Page transition to company page'} />
+            <Button label={'MORE'} href={'/pon-design/company'} id={'more-company'} ariaLabel={'Page transition to company page'} />
           </div>
         </section>
         <section className={styles['p-top-recruit']}>
@@ -319,7 +321,7 @@ const TopPageMemo = () => {
             <div className={styles['p-top-recruit__container']}>
               <Title title={'RECRUIT'} subTitle={'採用情報'} className={'c-title--section'} />
               <p className={styles['p-top-recruit__text']}>私たちと一緒に働きませんか？</p>
-              <Button label={'MORE'} href={'/pon-design/recruit'} id={'moreRecruit'} ariaLabel={'Page transition to recruit page'} />
+              <Button label={'MORE'} href={'/pon-design/recruit'} id={'more-recruit'} ariaLabel={'Page transition to recruit page'} />
             </div>
           </div>
         </section>

@@ -15,4 +15,9 @@
   --footer-bg: #120e19;
   --swiper-pagination-bottom: 3px;
   --swiper-theme-color: var(--primary) !important;
+  --header-height: 64px;
+  --footer-height: 209.09px;
+  --footer-height-pc: 175.3px;
+  --content-height: calc(100% - var(--header-height) - var(footer-height));
+  --content-height-pc: calc(100% - var(--header-height) - var(footer-height-pc));
 }

@@ -8,7 +8,7 @@ type Result = {
 const getNewsTitle = () => {
   let isLoading = false
   const fetchHandler = async (news_id: string): Promise<Result> => {
-    const url = `${process.env.API_URL_PON}/news/detail?news_id=${news_id}`
+    const url = `${process.env.NEXT_PUBLIC_API_URL_PON}/news/detail?news_id=${news_id}`
     try {
       isLoading = true
       const response = await fetch(url)
