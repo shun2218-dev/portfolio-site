@@ -7,6 +7,7 @@ const Laoding = () => {
       <div className={styles['loading-wrapper']}>
         <Spinner />
       </div>
+      <h1>loading...</h1>
     </main>
   )
 }

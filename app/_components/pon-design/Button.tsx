@@ -27,9 +27,13 @@ const Button: FC<Props> = ({ id, ariaLabel, label, href, type, onClick, variant 
   }
   return (
     <div className={[styles['c-button'], variantStyle()].join(' ')}>
-      {href && <Link href={href}>{label}</Link>}
+      {href && (
+        <Link data-pw={id} href={href}>
+          {label}
+        </Link>
+      )}
       {type && (
-        <button type={type} onClick={onClick} id={id} aria-label={ariaLabel} title={ariaLabel}>
+        <button type={type} onClick={onClick} id={id} aria-label={ariaLabel} title={ariaLabel} data-pw={id}>
           {label}
         </button>
       )}
