@@ -4,11 +4,17 @@ on:
     branches: main
   pull_request:
     branches: main
+env:
+  NEXT_PUBLIC_SITE_URL: ${{secrets.NEXT_PUBLIC_SITE_URL}}
+  NEXT_PUBLIC_SITE_URL_PON: ${{secrets.NEXT_PUBLIC_SITE_URL_PON}}
+  NEXT_PUBLIC_API_URL_PON: ${{secrets.NEXT_PUBLIC_API_URL_PON}}
+  NEXT_PUBLIC_USER: ${{secrets.NEXT_PUBLIC_USER}}
+  NEXT_PUBLIC_PASS: ${{secrets.NEXT_PUBLIC_PASS}}
+
 jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
-    environment: Preview
     strategy:
       matrix:
         browser: [chromium, firefox, webkit]
