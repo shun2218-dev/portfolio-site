@@ -16,10 +16,10 @@ const Title: FC<Props> = ({ title, subTitle, className = '', page = false }) => 
     }
   }
   return (
-    <h2 className={[styles['c-title'], page && styles['c-title--page'], classes()].join(' ')}>
+    <h1 className={[styles['c-title'], page && styles['c-title--page'], classes()].join(' ')}>
       {title}
       {subTitle && <span className={styles['c-hero__sub-title']}>{subTitle}</span>}
-    </h2>
+    </h1>
   )
 }
 
