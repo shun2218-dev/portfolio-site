@@ -1,71 +1,67 @@
-import { test, expect } from '@playwright/test'
+import { test, expect, Page } from '@playwright/test'
 
-test('pon-design_top-page', async ({ context }) => {
-  const page = await context.newPage()
-  const pupupPromise = page.waitForEvent('popup')
-  await page.goto('http://localhost:3000')
-  await page.getByRole('link', { name: 'pon design' }).click()
-  const ponDesign = await pupupPromise
-  // const loadPromise = page2.waitForEvent('load')
-  // const ponDesign = await loadPromise
+test.describe('pon-design_top-link', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto('http://localhost:3000/pon-design')
+  })
 
-  const waitForScreenshots = async (path: string, fullPage = true, timeout = 3000) => {
-    await ponDesign.waitForTimeout(timeout)
-    await ponDesign.screenshot({ path, fullPage })
+  test.afterEach(async ({ context }) => {
+    await context.close()
+  })
+
+  const waitForScreenshots = async (page: Page, fullPage = true, timeout = 8000) => {
+    await page.waitForTimeout(timeout)
+    await expect(page).toHaveScreenshot({ fullPage })
   }
-  await expect(ponDesign).toHaveURL('pon-design')
-  await waitForScreenshots('tests/e2e/results/top-page.png')
+  test('top-page', async ({ page }) => {
+    await expect(page).toHaveURL('pon-design')
+    await waitForScreenshots(page)
+  })
 
-  await ponDesign.getByTestId('hero-contact').click()
-  await ponDesign.waitForURL('**/contact')
-  await expect(ponDesign).toHaveURL('pon-design/contact')
-  await waitForScreenshots('tests/e2e/results/contact-page_from-hero.png')
+  test('contact-page_from-hero', async ({ page }) => {
+    await page.getByTestId('hero-contact').click()
+    await page.waitForURL('**/contact')
+    await expect(page).toHaveURL('pon-design/contact')
+    await waitForScreenshots(page)
+  })
 
-  await ponDesign.getByTestId('header-logo').click()
-  await ponDesign.waitForURL('**/pon-design')
-  await ponDesign.getByTestId('web-magazine').click()
-  await ponDesign.waitForURL('**/web-magazine')
-  await expect(ponDesign).toHaveURL('pon-design/news/web-magazine')
-  await waitForScreenshots('tests/e2e/results/web-magazine-page.png')
+  test('web-magazine-page', async ({ page }) => {
+    await page.getByTestId('web-magazine').click()
+    await page.waitForURL('**/web-magazine')
+    await expect(page).toHaveURL('pon-design/news/web-magazine')
+    await waitForScreenshots(page)
+  })
 
-  await ponDesign.getByTestId('header-logo').click()
-  await ponDesign.waitForURL('**/pon-design')
-  await ponDesign.getByTestId('more-service').click()
-  await ponDesign.waitForURL('**/service')
-  await expect(ponDesign).toHaveURL('pon-design/service')
-  await waitForScreenshots('tests/e2e/results/service-page.png')
+  test('service-page', async ({ page }) => {
+    await page.getByTestId('more-service').click()
+    await page.waitForURL('**/service')
+    await expect(page).toHaveURL('pon-design/service')
+    await waitForScreenshots(page)
+  })
 
-  await ponDesign.getByTestId('header-logo').click()
-  await ponDesign.waitForURL('**/pon-design')
-  await ponDesign.getByTestId('more-works').click()
-  await ponDesign.waitForURL('**/works')
-  await expect(ponDesign).toHaveURL('pon-design/works')
-  await waitForScreenshots('tests/e2e/results/works-page.png')
+  test('works-page', async ({ page }) => {
+    await page.getByTestId('more-works').click()
+    await page.waitForURL('**/works')
+    await expect(page).toHaveURL('pon-design/works')
+    await waitForScreenshots(page)
+  })
 
-  await ponDesign.getByTestId('header-logo').click()
-  await ponDesign.waitForURL('**/pon-design')
-  await ponDesign.getByTestId('more-company').click()
-  await ponDesign.waitForURL('**/company')
-  await expect(ponDesign).toHaveURL('pon-design/company')
-  await waitForScreenshots('tests/e2e/results/company-page.png')
-
-  await ponDesign.getByTestId('header-logo').click()
-  await ponDesign.waitForURL('**/pon-design')
-  await ponDesign.getByTestId('more-recruit').click()
-  await ponDesign.waitForURL('**/recruit')
-  await expect(ponDesign).toHaveURL('pon-design/recruit')
-  await waitForScreenshots('tests/e2e/results/recruit-page.png')
-
-  await ponDesign.getByTestId('header-logo').click()
-  await ponDesign.waitForURL('**/pon-design')
-  await ponDesign.getByTestId('more-contact').click()
-  await ponDesign.waitForURL('**/contact')
-  await expect(ponDesign).toHaveURL('pon-design/contact')
-  await waitForScreenshots('tests/e2e/results/contact-page.png')
-
-  await ponDesign.getByTestId('header-logo').click()
-  await ponDesign.waitForURL('**/pon-design')
-  await expect(ponDesign).toHaveURL('pon-design')
-
-  await context.close()
+  test('company-page', async ({ page }) => {
+    await page.getByTestId('more-company').click()
+    await page.waitForURL('**/company')
+    await expect(page).toHaveURL('pon-design/company')
+    await waitForScreenshots(page)
+  })
+  test('recruit-page', async ({ page }) => {
+    await page.getByTestId('more-recruit').click()
+    await page.waitForURL('**/recruit')
+    await expect(page).toHaveURL('pon-design/recruit')
+    await waitForScreenshots(page)
+  })
+  test('contact-page', async ({ page }) => {
+    await page.getByTestId('more-contact').click()
+    await page.waitForURL('**/contact')
+    await expect(page).toHaveURL('pon-design/contact')
+    await waitForScreenshots(page)
+  })
 })

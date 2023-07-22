@@ -17,7 +17,7 @@ export default defineConfig({
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
+  workers: process.env.CI ? 2 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
@@ -34,10 +34,12 @@ export default defineConfig({
     testIdAttribute: 'data-pw',
   },
   webServer: {
-    command: 'pnpm turbo build && pnpm turbo start',
+    command: process.env.CI ? 'pnpm turbo start' : 'pnpm turbo build && pnpm turbo start',
     port: 3000,
+    reuseExistingServer: !process.env.CI,
   },
   timeout: 120000,
+  snapshotDir: './tests/e2e/__screenshots__',
 
   /* Configure projects for major browsers */
   projects: [
