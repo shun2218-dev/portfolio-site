@@ -34,7 +34,7 @@ export default defineConfig({
     testIdAttribute: 'data-pw',
   },
   webServer: {
-    command: process.env.CI ? 'pnpm turbo build && pnpm turbo start' : 'pnpm turbo build && pnpm turbo start',
+    command: process.env.CI ? 'pnpm run start' : 'pnpm turbo build && pnpm turbo start',
     port: 3000,
     reuseExistingServer: !process.env.CI,
   },
