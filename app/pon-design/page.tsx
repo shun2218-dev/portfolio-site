@@ -209,11 +209,11 @@ const TopPageMemo = () => {
                 <Swiper
                   modules={[Pagination, EffectFade, Autoplay]}
                   pagination={pagination}
-                  autoplay={{ delay: 1000, disableOnInteraction: false }}
+                  autoplay={{ delay: 5000, disableOnInteraction: false }}
                   loop
                   effect={'fade'}
                   fadeEffect={{ crossFade: true }}
-                  speed={5000}
+                  speed={2500}
                 >
                   <>
                     {imagePaths.map((imagePath) =>
