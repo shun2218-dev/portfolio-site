@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint --fix",
     "test": "playwright test --trace on && playwright show-report",
     "test:e2e": "playwright codegen",
     "deploy:preview": "vercel",
@@ -35,6 +35,11 @@
   "devDependencies": {
     "@axe-core/playwright": "^4.9.0",
     "@playwright/test": "^1.43.1",
-    "dotenv": "^16.4.5"
+    "@typescript-eslint/eslint-plugin": "^7.8.0",
+    "@typescript-eslint/parser": "^7.8.0",
+    "dotenv": "^16.4.5",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-unused-imports": "^3.2.0",
+    "prettier": "^3.2.5"
   }
 }
