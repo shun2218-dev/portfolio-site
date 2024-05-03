@@ -22,7 +22,7 @@ const BreadcrumbMemo = () => {
   const pathname = usePathname()
   const params = useParams()
   const [newsTitle, setNewsTitle] = useState<string | null>(null)
-  const { data } = useSWR(`/api/pon-design/news/detail?news_id=${params.news_id}`, fetcher)
+  const { data } = useSWR(`/api/pon-design/news/detail?news_id=${params.news_id ?? 'web-magazine'}`, fetcher)
   const breadcrumb: Breadcrumb[] = useMemo(() => {
     return pathname
       .split('/')
