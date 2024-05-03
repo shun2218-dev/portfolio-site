@@ -10,7 +10,7 @@ type Props = {
 const NewsItemMemo: FC<Props> = ({ news }) => {
   return (
     <li className={styles['c-news__list-item']}>
-      <Link href={`/pon-design/news/${news.news_id}`} className={styles['c-news__link']} data-pw={news.news_id}>
+      <Link href={`/pon-design/news/${news.id}`} className={styles['c-news__link']} data-pw={news.id}>
         <div className={styles['c-news__header']}>
           <time className={styles['c-news__date']} dateTime={`${news.dateTime.year}-${news.dateTime.month}-${news.dateTime.day}`}>
             {`${news.dateTime.year}.${news.dateTime.month}.${news.dateTime.day}`}

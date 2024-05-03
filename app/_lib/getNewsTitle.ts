@@ -1,4 +1,4 @@
-import { NewsDetailInfo } from '~/types/pon-design'
+import { NewsInfo } from '~/types/pon-design'
 
 type Result = {
   title: string
@@ -12,7 +12,7 @@ const getNewsTitle = () => {
     try {
       isLoading = true
       const response = await fetch(url)
-      const data: NewsDetailInfo = await response.json()
+      const data: NewsInfo = await response.json()
       return { title: data.title, status: 'OK' }
     } catch (e) {
       if (e instanceof Error) {
