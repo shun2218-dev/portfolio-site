@@ -1,11 +1,11 @@
 import { Metadata } from 'next'
 import { FC, ReactNode } from 'react'
-import { MetaProps, NewsDetailInfo } from '~/types/pon-design'
+import { MetaProps, NewsInfo } from '~/types/pon-design'
 export async function generateMetadata({ params }: Omit<MetaProps, 'searchParams'>): Promise<Metadata> {
   const news_id = params.news_id
   const API_URL = `${process.env.NEXT_PUBLIC_SITE_URL_PON}/news/detail?news_id=${news_id}`
   const response = await fetch(API_URL)
-  const data: NewsDetailInfo = await response.json()
+  const data: NewsInfo = await response.json()
 
   const siteName = data.title
   const url = `${process.env.NEXT_PUBLIC_SITE_URL_PON}/news/${params.news_id}`
