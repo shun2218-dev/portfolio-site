@@ -3,7 +3,7 @@ import styles from '~/styles/pon-design/Breadcrumb.module.scss'
 import Link from 'next/link'
 import { useParams, usePathname } from 'next/navigation'
 import { useSearchParam } from 'react-use'
-import { NewsDetailInfo } from '~/types/pon-design'
+import { NewsInfo } from '~/types/pon-design'
 import useSWR from 'swr'
 
 type Breadcrumb = {
@@ -14,7 +14,7 @@ type Breadcrumb = {
 
 const fetcher = async (url: string) => {
   const res = await fetch(url)
-  const data = (await res.json()) as NewsDetailInfo
+  const data = (await res.json()) as NewsInfo
   return data
 }
 

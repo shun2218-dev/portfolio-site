@@ -1,6 +1,6 @@
 'use client'
 import styles from '~/styles/pon-design/NewsDetail.module.scss'
-import type { NewsDetailInfo } from '~/types/pon-design'
+import type { NewsInfo } from '~/types/pon-design'
 import { useEffect, useState } from 'react'
 import { NewsDetail } from '~/components/pon-design/NewsDetail'
 import { PageLayout } from '~/components/pon-design/PageLayout'
@@ -10,13 +10,13 @@ import useSWR from 'swr'
 
 const fetcher = async (url: string) => {
   const res = await fetch(url)
-  const data = (await res.json()) as NewsDetailInfo
+  const data = (await res.json()) as NewsInfo
   return data
 }
 
 const NewsDetailPage = () => {
   const params = useParams()
-  const [newsDatailData, setNewsDatailData] = useState<NewsDetailInfo | null>(null)
+  const [newsDatailData, setNewsDatailData] = useState<NewsInfo | null>(null)
   const { data, error, isLoading, isValidating } = useSWR(`/api/pon-design/news/detail?news_id=${params.news_id}`, fetcher)
   if (error) throw new Error(error.message)
 
