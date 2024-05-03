@@ -1,1 +1,7 @@
+node_modules
 .next
+.turbo
+.vercel
+dist
+out
+public/
