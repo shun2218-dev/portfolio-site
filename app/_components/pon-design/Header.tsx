@@ -16,6 +16,7 @@ const HeaderMemo: FC<Props> = ({ font }) => {
   const breakpoint = useBreakpoint()
   const { el, DOMRect } = useElementHeight()
   const { y } = useWindowScroll()
+  const [isClient, setIsClient] = useState(false)
   const [on, toggle] = useToggle(false)
   const isNavHidden = useMemo(() => {
     if (!(breakpoint === 'tablet' || breakpoint === 'smartphone')) {
@@ -26,16 +27,50 @@ const HeaderMemo: FC<Props> = ({ font }) => {
       return true
     }
   }, [breakpoint, on])
+
+  const NAV_LIST = useMemo(() => {
+    return [
+      {
+        label: 'NEWS',
+        link: '/pon-design/news',
+      },
+      {
+        label: 'SERVICE',
+        link: '/pon-design/service',
+      },
+      {
+        label: 'WORKS',
+        link: '/pon-design/works',
+      },
+      {
+        label: 'COMPANY',
+        link: '/pon-design/company',
+      },
+      {
+        label: 'RECRUIT',
+        link: '/pon-design/recruit',
+      },
+      {
+        label: 'CONTACT',
+        link: '/pon-design/contact',
+      },
+    ]
+  }, [])
+
   useEffect(() => {
     if (breakpoint !== 'smartphone') {
       toggle(false)
     }
   }, [breakpoint, on, toggle])
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
   return (
     <header className={[styles['l-header'], font.className].join(' ')} ref={el} data-is-fixed={y > DOMRect?.height! ? true : false} data-is-open={on}>
       <div className={styles['l-header__inner']}>
         <h1 className={styles['l-header__logo']}>
-          <Link href="/pon-design" className={styles['l-header__logo-link']} data-pw="header-logo">
+          <Link href="/pon-design" className={styles['l-header__logo-link']} data-pw="header-logo" aria-label="PON DESIGN">
             <svg xmlns="http://www.w3.org/2000/svg" width="160.92" height="17.376" viewBox="0 0 160.92 17.376" className={styles['l-header__logo-image']}>
               <title>PON DESIGN</title>
               <path
@@ -48,7 +83,7 @@ const HeaderMemo: FC<Props> = ({ font }) => {
             </svg>
           </Link>
         </h1>
-        {(breakpoint === 'tablet' || breakpoint === 'smartphone') && (
+        {isClient && (breakpoint === 'tablet' || breakpoint === 'smartphone') && (
           <button
             className={[styles['l-header__nav-button']].join(' ')}
             data-is-visible={breakpoint === 'tablet' || breakpoint === 'smartphone' ? true : false}
@@ -62,38 +97,15 @@ const HeaderMemo: FC<Props> = ({ font }) => {
           </button>
         )}
       </div>
-      <nav className={[styles['l-header__nav']].join(' ')} id="header-nav" aria-hidden={isNavHidden} title="header navigation">
-        <ul className={styles['l-header__nav-menu']}>
-          <li className={styles['l-header__nav-item']}>
-            <Link href="/pon-design/news" className={styles['l-header__nav-link']}>
-              <span className={styles['l-header__link-text']}>NEWS</span>
-            </Link>
-          </li>
-          <li className={styles['l-header__nav-item']}>
-            <Link href="/pon-design/service" className={styles['l-header__nav-link']}>
-              <span className={styles['l-header__link-text']}>SERVICE</span>
-            </Link>
-          </li>
-          <li className={styles['l-header__nav-item']}>
-            <Link href="/pon-design/works" className={styles['l-header__nav-link']}>
-              <span className={styles['l-header__link-text']}>WORKS</span>
-            </Link>
-          </li>
-          <li className={styles['l-header__nav-item']}>
-            <Link href="/pon-design/company" className={styles['l-header__nav-link']}>
-              <span className={styles['l-header__link-text']}>COMPANY</span>
-            </Link>
-          </li>
-          <li className={styles['l-header__nav-item']}>
-            <Link href="/pon-design/recruit" className={styles['l-header__nav-link']}>
-              <span className={styles['l-header__link-text']}>RECRUIT</span>
-            </Link>
-          </li>
-          <li className={styles['l-header__nav-item']}>
-            <Link href="/pon-design/contact" className={styles['l-header__nav-link']}>
-              <span className={styles['l-header__link-text']}>CONTACT</span>
-            </Link>
-          </li>
+      <nav className={[styles['l-header__nav']].join(' ')} id="header-nav" title="header navigation">
+        <ul className={styles['l-header__nav-menu']} aria-hidden={isNavHidden}>
+          {NAV_LIST.map((nav) => (
+            <li className={styles['l-header__nav-item']} key={nav.label.toLocaleLowerCase()} onClick={toggle}>
+              <Link href={`${nav.link}`} className={styles['l-header__nav-link']} tabIndex={isNavHidden ? -1 : 1}>
+                <span className={styles['l-header__link-text']}>{nav.label}</span>
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>
