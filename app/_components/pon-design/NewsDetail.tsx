@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import React, { FC, memo, useCallback, useState } from 'react'
-import { NewsDetailInfo } from '~/types/pon-design'
+import { NewsInfo } from '~/types/pon-design'
 import { ShareButton } from './ShareButton'
 import styles from '~/styles/pon-design/NewsDetail.module.scss'
 import newsStyles from '~/styles/pon-design/News.module.scss'
 import { createBreakpoint } from 'react-use'
 
-type Props = Omit<NewsDetailInfo, 'id'>
+type Props = Omit<NewsInfo, 'id'>
 
 const useBreakpoint = createBreakpoint({ laptopL: 1440, tablet: 768, smartphone: 560 })
 
