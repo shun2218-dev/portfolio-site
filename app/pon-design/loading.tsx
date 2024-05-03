@@ -3,11 +3,11 @@ import styles from '~/styles/loading.module.scss'
 
 const Laoding = () => {
   return (
-    <main>
+    <main className={styles['loading']}>
       <div className={styles['loading-wrapper']}>
         <Spinner />
+        <h1>loading...</h1>
       </div>
-      <h1>loading...</h1>
     </main>
   )
 }
