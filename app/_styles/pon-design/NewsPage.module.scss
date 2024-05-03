@@ -5,6 +5,7 @@
 /* news */
 .p-news-article {
   margin: 40px 0;
+  max-width: 100%;
 }
 .p-news-article__inner {
   padding: 0 20px;
@@ -36,6 +37,17 @@
   background-image: none;
   background-color: #f1ebf8;
   color: var(--primary);
+}
+
+.p-news-article__error-message {
+  font-size: 1.5rem;
+  margin: 1rem 0 3rem;
+  text-align: center;
+}
+
+.p-news-article__error-link {
+  color: white;
+  font-size: 1rem;
 }
 
 @media screen and (min-width: 768px) {

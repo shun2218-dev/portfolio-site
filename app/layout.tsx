@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -35,12 +36,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja">
+      <head>
+        <script data-project-id="EQGJ0NHInxlvlN9tWDd1FXolzpxSIUNbceA57XQK" src="https://snippet.meticulous.ai/v1/meticulous.js" />
+      </head>
       <body className={inter.className}>
-        <head>
-          <script data-project-id="EQGJ0NHInxlvlN9tWDd1FXolzpxSIUNbceA57XQK" src="https://snippet.meticulous.ai/v1/meticulous.js" />
-        </head>
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )

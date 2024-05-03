@@ -32,6 +32,7 @@ export default defineConfig({
     trace: 'on-first-retry',
     video: 'on',
     testIdAttribute: 'data-pw',
+    viewport: null,
   },
   webServer: {
     command: process.env.CI ? 'pnpm run build && pnpm run start' : 'pnpm turbo build && pnpm turbo start',

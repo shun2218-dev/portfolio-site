@@ -6,7 +6,7 @@ test.describe('PON DESIGN', () => {
     const page = await context.newPage()
     await page.goto('http://localhost:3000/pon-design')
     await page.waitForURL('pon-design')
-    const accessibilityScanResults = await new AxeBuilder({ page: page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']).analyze()
+    const accessibilityScanResults = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']).analyze()
 
     expect(accessibilityScanResults.violations).toEqual([])
   })
