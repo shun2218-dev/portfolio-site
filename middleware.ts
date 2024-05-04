@@ -4,10 +4,15 @@ import { decodeBase64 } from '~/lib/buffer'
 // For production use only
 
 export const config = {
-  matcher: ['/', '/pon-design/:path*'],
+  matcher: ['/', '/pon-design/:path*', '/daily-trial/:path*'],
 }
 
+const excludes = ['opengraph-image', 'twitter-image', 'sitemap.xml', 'favicon.ico', 'apple-touch-icon.png', 'apple-icon.png']
+
 export function middleware(req: NextRequest) {
+  if (excludes.some((x) => req.nextUrl.pathname.includes(x))) {
+    return NextResponse.next()
+  }
   const basicAuth = req.headers.get('authorization')
 
   if (basicAuth) {
