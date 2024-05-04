@@ -10,6 +10,7 @@ const description = 'Here is a portfolio site created using Next.js.'
 const url = process.env.NEXT_PUBLIC_SITE_URL
 
 export const metadata: Metadata = {
+  metadataBase: new URL(`${process.env.VERCEL_URL!}`),
   title: siteName,
   description: 'Portfolio Site Collection',
   robots: {
