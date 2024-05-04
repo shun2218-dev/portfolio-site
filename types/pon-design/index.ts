@@ -16,4 +16,4 @@ type NewsInfo = {
   title: string
 }
 
-export type { MetaProps, NewsInfo }
+export type { MetaProps, NewsInfo, DateTime }
