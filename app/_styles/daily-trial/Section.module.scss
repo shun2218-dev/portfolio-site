@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* ==============================================
+                c-section
+================================================= */
+.c-section {
+  padding: 44px 3% 0;
+}
+
+.c-section__inner {
+  margin-top: 16px;
+  padding: 0 2%;
+}
+
+.c-section__title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .c-section {
+    padding-top: 50px;
+  }
+
+  .c-section__inner {
+    padding: 0 10% 32px;
+  }
+  .c-section__title {
+    font-size: 30px;
+    font-weight: 800;
+  }
+}

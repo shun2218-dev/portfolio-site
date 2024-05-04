@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* ==============================================
+                utility
+================================================= */
+.u-pc-br {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .u-sp-br {
+    display: none;
+  }
+
+  .u-pc-br {
+    display: block;
+  }
+}
