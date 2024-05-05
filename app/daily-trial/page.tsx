@@ -59,7 +59,7 @@ const DTTopMemo = () => {
                 alt="初級コース"
                 width={1012}
                 height={506}
-                style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                style={{ width: '100%', height: '100%' }}
                 placeholder="blur"
                 blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
               />
@@ -71,7 +71,7 @@ const DTTopMemo = () => {
                 alt="中級コース"
                 width={1012}
                 height={506}
-                style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                style={{ width: '100%', height: '100%' }}
                 placeholder="blur"
                 blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
               />
@@ -83,7 +83,7 @@ const DTTopMemo = () => {
                 alt="上級コース"
                 width={1012}
                 height={506}
-                style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                style={{ width: '100%', height: '100%' }}
                 placeholder="blur"
                 blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
               />

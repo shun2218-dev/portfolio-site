@@ -1,14 +1,11 @@
 import { FC, ReactNode } from 'react'
-import { SiteLayout } from '~/components/daily-trial/SiteLayout'
 import { Metadata } from 'next'
+import { SiteLayout } from '~/components/sneakers/SiteLayout'
+import '~/styles/sneakers/globals.scss'
 
-type Props = {
-  children: ReactNode
-}
-
-const siteName = 'DAILY TRIAL'
-const description = 'DAILY TRIAL is a fictitious website. This website was created using design comps that can be used as a free portfolio.'
-const url = process.env.NEXT_PUBLIC_SITE_URL_DAILY_TRIAL
+const siteName = 'Sneakers'
+const description = 'Sneakers is a fictitious website. This website was created using design comps that can be used as a free portfolio.'
+const url = process.env.NEXT_PUBLIC_SITE_URL_PON
 
 export const metadata: Metadata = {
   title: {
@@ -33,8 +30,12 @@ export const metadata: Metadata = {
   },
 }
 
-const DTLayout: FC<Props> = ({ children }) => {
+type Props = {
+  children: ReactNode
+}
+
+const PonDesignLayout: FC<Props> = ({ children }) => {
   return <SiteLayout>{children}</SiteLayout>
 }
 
-export default DTLayout
+export default PonDesignLayout
