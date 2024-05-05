@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneakers</title>
+    <link href="style.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="icon" href="assets/images/favicon.ico" />
+</head>
+<body>
+    <header class="p-header">        
+            <a class="p-header__logo-link" href="/" aria-label="Sneakers" role="img">
+                <img src="assets/images/logo.svg" alt="Sneakers" class="p-header__logo">
+            </a>
+            <button type="button" class="p-header__menu-button js-menu-button" data-is-menu-open="false">
+                <span class="p-header__menu-bar"></span>
+            </button>
+            <nav class="p-header__nav" data-is-menu-open="false">
+                <ul class="p-header__menu-list">
+                    <li class="p-header__menu-item">
+                        <a href="#pickup" class="p-header__menu-link js-header-nav">PICK UP</a>
+                    </li>
+                    <li class="p-header__menu-item">
+                        <a href="#feature" class="p-header__menu-link js-header-nav">FEATURE</a>
+                    </li>
+                    <li class="p-header__menu-item">
+                        <a href="#contact" class="p-header__menu-link js-header-nav">CONTACT</a>
+                    </li>
+                </ul>
+                <ul class="p-header__media">
+                    <li class="p-header__media-item">
+                        <a class="p-header__media-link p-header__media-link--twitter">Twitter</a>
+                    </li>
+                    <li class="p-header__media-item">
+                        <a class="p-header__media-link p-header__media-link--facebook">facebook</a>
+                    </li>
+                    <li class="p-header__media-item">
+                        <a class="p-header__media-link p-header__media-link--instagram">Instagram</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="p-header__nav-overlay"></div>
+    </header>
+    <main>
+        <section id="hero" class="p-hero">
+            <Video class="p-hero__main-video" src="assets/videos/main-visual.mp4" loop autoplay muted playsinline />
+        </section>
+        <section id="pickup" class="p-pickup c-section">
+            <div class="p-pickup__inner">
+                <h1 class="c-section__title">PICK UP</h1>
+                <div class="swiper">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <img class="swiper-slide__image" src="assets/images/pickup1.jpg" alt="pick up 1" loading="lazy" />
+                        </li>
+                        <li class="swiper-slide">
+                            <img class="swiper-slide__image" src="assets/images/pickup2.jpg" alt="pick up 2" loading="lazy" />
+                        </li>
+                        <li class="swiper-slide">
+                            <img class="swiper-slide__image" src="assets/images/pickup3.jpg" alt="pick up 3" loading="lazy"/>
+                        </li>
+                        <li class="swiper-slide">
+                            <img class="swiper-slide__image" src="assets/images/pickup4.jpg" alt="pick up 4" loading="lazy" />
+                        </li>
+                        <li class="swiper-slide">
+                            <img class="swiper-slide__image" src="assets/images/pickup5.jpg" alt="pick up 5" loading="lazy" />
+                        </li>
+                        <li class="swiper-slide">
+                            <img class="swiper-slide__image" src="assets/images/pickup6.jpg" alt="pick up 6" loading="lazy" />
+                        </li>
+                        <li class="swiper-slide">
+                            <img class="swiper-slide__image" src="assets/images/pickup7.jpg" alt="pick up 7" loading="lazy"/>
+                        </li>
+                        <li class="swiper-slide">
+                            <img class="swiper-slide__image" src="assets/images/pickup8.jpg" alt="pick up 8" loading="lazy"/>
+                        </li>
+                        <li class="swiper-slide">
+                            <img class="swiper-slide__image" src="assets/images/pickup9.jpg" alt="pick up 9" loading="lazy" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="feature" class="p-feature c-section">
+            <div class="p-feature__inner">
+                <h1 class="c-section__title">FEATURE</h1>
+                <ul class="p-feature__card-list">
+                    <li class="c-card" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                        <img class="c-card__image" src="assets/images/feature1.jpg" alt="feature 1" />
+                        <div class="c-card__text-container">
+                            <p class="c-card__category">category</p>
+                            <p class="c-card__description">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                            <p class="c-card__date">XXXX.XX.XX</p>
+                        </div>
+                    </li>
+                    <li class="c-card" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                        <img class="c-card__image" src="assets/images/feature2.jpg" alt="feature 2" />
+                        <div class="c-card__text-container">
+                            <p class="c-card__category">category</p>
+                            <p class="c-card__description">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                            <p class="c-card__date">XXXX.XX.XX</p>
+                        </div>
+                    </li>
+                    <li class="c-card" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                        <img class="c-card__image" src="assets/images/feature3.jpg" alt="feature 3" />
+                        <div class="c-card__text-container">
+                            <p class="c-card__category">category</p>
+                            <p class="c-card__description">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                            <p class="c-card__date">XXXX.XX.XX</p>
+                        </div>
+                    </li>
+                    <li class="c-card" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                        <img class="c-card__image" src="assets/images/feature4.jpg" alt="feature 4" />
+                        <div class="c-card__text-container">
+                            <p class="c-card__category">category</p>
+                            <p class="c-card__description">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                            <p class="c-card__date">XXXX.XX.XX</p>
+                        </div>
+                    </li>
+                    <li class="c-card" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                        <img class="c-card__image" src="assets/images/feature5.jpg" alt="feature 5" />
+                        <div class="c-card__text-container">
+                            <p class="c-card__category">category</p>
+                            <p class="c-card__description">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                            <p class="c-card__date">XXXX.XX.XX</p>
+                        </div>
+                    </li>
+                    <li class="c-card" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                        <img class="c-card__image" src="assets/images/feature6.jpg" alt="feature 6" />
+                        <div class="c-card__text-container">
+                            <p class="c-card__category">category</p>
+                            <p class="c-card__description">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                            <p class="c-card__date">XXXX.XX.XX</p>
+                        </div>
+                    </li>
+                    <li class="c-card" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                        <img class="c-card__image" src="assets/images/feature7.jpg" alt="feature 6" />
+                        <div class="c-card__text-container">
+                            <p class="c-card__category">category</p>
+                            <p class="c-card__description">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                            <p class="c-card__date">XXXX.XX.XX</p>
+                        </div>
+                    </li>
+                    <li class="c-card" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                        <img class="c-card__image" src="assets/images/feature8.jpg" alt="feature 7" />
+                        <div class="c-card__text-container">
+                            <p class="c-card__category">category</p>
+                            <p class="c-card__description">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                            <p class="c-card__date">XXXX.XX.XX</p>
+                        </div>
+                    </li>
+                    <li class="c-card" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                        <img class="c-card__image" src="assets/images/feature9.jpg" alt="feature 8" />
+                        <div class="c-card__text-container">
+                            <p class="c-card__category">category</p>
+                            <p class="c-card__description">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                            <p class="c-card__date">XXXX.XX.XX</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="contact" class="p-contact c-section">
+            <div class="p-contact__inner">
+                <h1 class="c-section__title">CONTACT</h1>
+                <div class="p-contact__wrapper">
+                    <div class="p-contact__text-container">
+                        <p class="p-contact__text">テキストテキストテキスト</p>
+                        <p class="p-contact__text">テキストテキストテキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                        <p class="p-contact__text">テキストテキストテキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                        </div>
+                        <form class="p-contact__form js-contact-form" name="contact-form">
+                            <label for="name" class="p-contact__label">Name:</label>
+                            <input type="text" name="name" id="name" class="p-contact__input p-contact__input--name">
+                            <label for="email" class="p-contact__label">Email:</label>
+                            <input type="email" inputmode="email" name="email" id="name" class="p-contact__input p-contact__input--email">
+                            <label for="message" class="p-contact__label">Message:</label>
+                            <textarea id="message" name="message" rows="4" class="p-contact__input p-contact__input--message"></textarea>
+                            <button  class="p-contact__submit-button">SEND</button>
+                        </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="p-footer">
+        <small class="p-footer__copyrights">&copy; Sneakers</small>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
