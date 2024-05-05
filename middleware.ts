@@ -4,7 +4,7 @@ import { decodeBase64 } from '~/lib/buffer'
 // For production use only
 
 export const config = {
-  matcher: ['/', '/pon-design/:path*', '/daily-trial/:path*'],
+  matcher: ['/', '/pon-design/:path*', '/daily-trial/:path*', '/sneakers/:path*'],
 }
 
 const excludes = ['opengraph-image', 'twitter-image', 'sitemap.xml', 'favicon.ico', 'apple-touch-icon.png', 'apple-icon.png']
