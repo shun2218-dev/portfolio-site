@@ -38,7 +38,7 @@ const SneakersTopMemo = () => {
   return (
     <main onLoad={() => setIsVideoReady(true)}>
       <section id="hero" className={styles['p-hero']}>
-        <video className="p-hero__main-video" src="/videos/sneakers/main-visual.mp4" loop autoPlay muted playsInline />
+        <video className={styles['p-hero__main-video']} src="/videos/sneakers/main-visual.mp4" loop autoPlay muted playsInline />
       </section>
       <section id="pickup" className={[styles['p-pickup'], 'c-section'].join(' ')}>
         <div className={styles['p-pickup__inner']}>
