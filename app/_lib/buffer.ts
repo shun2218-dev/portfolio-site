@@ -1,4 +1,4 @@
-import { Buffer } from 'buffer'
+import { Buffer } from 'node:buffer'
 
 export const decodeBase64 = (data: string) => {
   return Buffer.from(data, 'base64').toString('ascii')
