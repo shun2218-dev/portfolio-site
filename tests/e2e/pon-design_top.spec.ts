@@ -1,13 +1,15 @@
 import { test, expect, Page } from '@playwright/test'
 
 test.describe('pon-design_top-link', () => {
-  const waitForScreenshots = async (page: Page, fullPage = true, timeout = 10000) => {
+  const waitForScreenshots = async (page: Page, fullPage = true, timeout = 5000) => {
     await page.waitForTimeout(timeout)
     await expect(page).toHaveScreenshot({ fullPage })
   }
 
   test.beforeEach(async ({ page }) => {
-    await page.goto('http://localhost:3000/pon-design')
+    const url = 'http://localhost:3000/pon-design'
+    await page.goto(url)
+    await page.waitForURL(url)
   })
 
   test.afterEach(async ({ page, context }) => {

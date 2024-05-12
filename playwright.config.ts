@@ -39,7 +39,7 @@ export default defineConfig({
     port: 3000,
     reuseExistingServer: !process.env.CI,
   },
-  timeout: 120000,
+  timeout: 50000,
   snapshotDir: './tests/e2e/__screenshots__',
 
   /* Configure projects for major browsers */
