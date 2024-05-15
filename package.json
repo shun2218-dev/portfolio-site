@@ -11,7 +11,7 @@
     "test": "playwright test --trace on && playwright show-report",
     "test:e2e": "playwright codegen",
     "test:allure": "playwright test --reporter=line,allure-playwright",
-    "test:allure-report": "allure generate ./allure-results --clean && allure open ./allure-report",
+    "test:allure-report": "allure generate ./allure-results --clean && allure open",
     "deploy:preview": "vercel",
     "deploy:prod": "vercel --prod"
   },

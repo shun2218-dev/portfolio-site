@@ -4,6 +4,20 @@ on:
     branches: main
   pull_request:
     branches: main
+
+  # Allow updating snapshots during manual runs
+  workflow_call:
+    inputs:
+      update-snapshots:
+        description: 'Update snapshots?'
+        type: boolean
+
+  # Allow updating snapshots during automatic runs
+  workflow_dispatch:
+    inputs:
+      update-snapshots:
+        description: 'Update snapshots?'
+        type: boolean
 env:
   NEXT_PUBLIC_SITE_URL: ${{secrets.NEXT_PUBLIC_SITE_URL}}
   NEXT_PUBLIC_SITE_URL_PON: ${{secrets.NEXT_PUBLIC_SITE_URL_PON}}
@@ -33,11 +47,22 @@ jobs:
         run: pnpm install
       - name: Install Playwright Browsers
         run: pnpm exec playwright install --with-deps ${{matrix.browser}}
-      - name: Run Playwright tests
-        run: HOME=/root pnpm playwright test --project=${{matrix.browser}} --update-snapshots
+      - name: Set up cache
+        id: cache
+        uses: actions/cache@v4
+        with:
+          key: cache/${{github.repository}}/${{github.ref}}
+          restore-keys: cache/${{github.repository}}/refs/heads/main
+          path: tests/**
+      - name: Initialize snapshots
+        if: ${{steps.cache.outputs.cache-hit != 'true' || inputs.update-snapshots == 'true'}}
+        run: HOME=/root pnpm playwright test --project=${{matrix.browser}} --update-snapshots --reporter html
+      - name: Test
+        run: npx playwright test
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: playwright-report-${{matrix.browser}}
-          path: playwright-report/
+          path: tests/results/
           retention-days: 30
+          overwrite: true

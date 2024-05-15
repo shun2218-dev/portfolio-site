@@ -45,6 +45,10 @@ next-env.d.ts
 # vecel
 .vercel
 
+# tests
+/tests/__screenshots__/
+/tests/output/
+
 # playwright
 /test-results/
 /playwright-report/
