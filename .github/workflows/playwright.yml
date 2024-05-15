@@ -36,17 +36,25 @@ jobs:
       matrix:
         browser: [chromium, firefox, webkit]
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
         with:
+          cache: pnpm
           node-version: 20
-      - uses: pnpm/action-setup@v2.2.2
-        with:
-          version: 8.6.7
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+          version: 8.7.0
+
       - name: Install dependencies
         run: pnpm install
+
       - name: Install Playwright Browsers
         run: pnpm exec playwright install --with-deps ${{matrix.browser}}
+
       - name: Set up cache
         id: cache
         uses: actions/cache@v4
@@ -54,11 +62,14 @@ jobs:
           key: cache/${{github.repository}}/${{github.ref}}
           restore-keys: cache/${{github.repository}}/refs/heads/main
           path: tests/**
+
       - name: Initialize snapshots
         if: ${{steps.cache.outputs.cache-hit != 'true' || inputs.update-snapshots == 'true'}}
         run: HOME=/root pnpm playwright test --project=${{matrix.browser}} --update-snapshots --reporter html
+
       - name: Test
         run: npx playwright test
+
       - uses: actions/upload-artifact@v4
         if: always()
         with:
