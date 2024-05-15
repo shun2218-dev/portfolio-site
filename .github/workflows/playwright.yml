@@ -68,7 +68,7 @@ jobs:
         run: HOME=/root pnpm playwright test --project=${{matrix.browser}} --update-snapshots --reporter html
 
       - name: Test
-        run: HOME=/root pnpx playwright test --project=${{matrix.browser}} --reporter html
+        run: HOME=/root pnpm playwright test --project=${{matrix.browser}} --reporter html
 
       - uses: actions/upload-artifact@v4
         if: always()
