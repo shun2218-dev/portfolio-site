@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint --fix",
-    "test": "playwright test --trace on && playwright show-report",
+    "test": "pnpm exec playwright test --trace on && pnpm exec playwright show-report tests/results",
     "test:e2e": "playwright codegen",
     "test:allure": "playwright test --reporter=line,allure-playwright",
     "test:allure-report": "allure generate ./allure-results --clean && allure open",

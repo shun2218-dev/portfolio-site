@@ -48,6 +48,8 @@ next-env.d.ts
 # tests
 /tests/__screenshots__/
 /tests/output/
+/tests/results/
+/tests/results/**/*
 
 # playwright
 /test-results/
