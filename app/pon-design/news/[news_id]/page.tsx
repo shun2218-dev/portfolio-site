@@ -17,7 +17,7 @@ const fetcher = async (url: string) => {
 const NewsDetailPage = () => {
   const params = useParams()
   const [newsDatailData, setNewsDatailData] = useState<NewsInfo | null>(null)
-  const { data, error, isLoading, isValidating } = useSWR(`/api/pon-design/news/detail?news_id=${params.news_id ?? 'web-magazine'}`, fetcher)
+  const { data, error, isLoading, isValidating } = useSWR(`/api/pon-design/news/${params.news_id ?? 'web-magazine'}`, fetcher)
   if (error) throw new Error(error.message)
 
   useEffect(() => {

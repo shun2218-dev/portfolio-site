@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test'
+import { testPlanFilter } from 'allure-playwright/dist/testplan'
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -20,7 +21,8 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 2 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [['html', { outputFolder: 'test/results', open: 'never' }], ['allure-playwright'], !!process.env.CI ? ['github'] : ['line']],
+  grep: testPlanFilter(),
+  reporter: [['html', { outputFolder: 'tests/results', open: 'never' }], ['allure-playwright'], !!process.env.CI ? ['github'] : ['line']],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
@@ -42,6 +44,12 @@ export default defineConfig({
   },
   timeout: 120000,
   snapshotPathTemplate: '{testDir}/__screenshots__/{testFilePath}/{projectName}/{arg}{ext}',
+  expect: {
+    timeout: 12000,
+    toHaveScreenshot: {
+      maxDiffPixels: 50000,
+    },
+  },
 
   /* Configure projects for major browsers */
   projects: [

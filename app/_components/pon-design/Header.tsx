@@ -101,7 +101,7 @@ const HeaderMemo: FC<Props> = ({ font }) => {
         <ul className={styles['l-header__nav-menu']} aria-hidden={isNavHidden}>
           {NAV_LIST.map((nav) => (
             <li className={styles['l-header__nav-item']} key={nav.label.toLocaleLowerCase()} onClick={toggle}>
-              <Link href={`${nav.link}`} className={styles['l-header__nav-link']} tabIndex={isNavHidden ? -1 : 1}>
+              <Link href={`${nav.link}`} className={styles['l-header__nav-link']} tabIndex={!isNavHidden ? 1 : -1}>
                 <span className={styles['l-header__link-text']}>{nav.label}</span>
               </Link>
             </li>
