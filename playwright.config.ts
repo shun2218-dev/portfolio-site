@@ -44,6 +44,9 @@ export default defineConfig({
   },
   timeout: 120000,
   snapshotPathTemplate: '{testDir}/__screenshots__/{testFilePath}/{projectName}/{arg}{ext}',
+  expect: {
+    timeout: 12000,
+  },
 
   /* Configure projects for major browsers */
   projects: [

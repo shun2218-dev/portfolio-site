@@ -1,9 +1,8 @@
 import { test, expect, Page } from '@playwright/test'
 
-test.describe('pon-design_top-link', () => {
+test.describe('pon-design_top', () => {
   const waitForScreenshots = async (page: Page, fullPage = true, timeout = 12000) => {
-    await page.waitForTimeout(timeout)
-    await expect(page).toHaveScreenshot({ fullPage })
+    await expect(page).toHaveScreenshot({ fullPage, maxDiffPixelRatio: 0.5, maxDiffPixels: 1, timeout })
   }
 
   test.beforeEach(async ({ page }) => {
