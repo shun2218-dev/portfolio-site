@@ -204,6 +204,17 @@
   text-align: center;
 }
 
+.c-spinner {
+  width: 335px;
+  height: 210px;
+  top: -210px;
+  left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
 @media screen and (min-width: 1179px) {
   .p-top-recruit {
     margin-top: 70px;
@@ -298,6 +309,15 @@
   }
   .p-top-contact {
     margin-top: 110px;
+  }
+}
+
+@media screen and (min-width: 560px) {
+  .c-spinner {
+    width: 750px;
+    height: 510px;
+    top: 0;
+    left: 0;
   }
 }
 

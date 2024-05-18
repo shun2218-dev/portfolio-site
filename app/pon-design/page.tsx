@@ -72,13 +72,6 @@ const TopPageMemo = () => {
     }),
     []
   )
-  const spinnerStyle = useCallback(() => {
-    if (breakpoint !== 'smartphone') {
-      return { width: '750px', height: '510px', top: `0`, left: '0' }
-    } else {
-      return { width: '335px', height: '210px', top: `-210px`, left: '20px' }
-    }
-  }, [breakpoint])
 
   return (
     <>
@@ -210,7 +203,7 @@ const TopPageMemo = () => {
                   modules={[Pagination, EffectFade, Autoplay]}
                   pagination={pagination}
                   autoplay={{ delay: 5000, disableOnInteraction: false }}
-                  loop
+                  loop={imagePaths.length > 2}
                   effect={'fade'}
                   fadeEffect={{ crossFade: true }}
                   speed={2500}
@@ -224,7 +217,7 @@ const TopPageMemo = () => {
                             alt={`${imagePath.pc.split('.')[0]}`}
                             width={750}
                             height={510}
-                            style={{ objectFit: 'contain', aspectRatio: 1.47, height: 'auto' }}
+                            style={{ objectFit: 'contain', aspectRatio: 1.47 }}
                             placeholder="blur"
                             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
                           />
@@ -246,7 +239,7 @@ const TopPageMemo = () => {
                   </>
                 </Swiper>
               ) : (
-                <div style={{ ...spinnerStyle(), display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative' }}>
+                <div className={styles['c-spinner']}>
                   <Spinner />
                 </div>
               )}

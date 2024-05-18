@@ -45,6 +45,12 @@ next-env.d.ts
 # vecel
 .vercel
 
+# tests
+/tests/__screenshots__/
+/tests/output/
+/tests/results/
+/tests/results/**/*
+
 # playwright
 /test-results/
 /playwright-report/
@@ -52,3 +58,7 @@ next-env.d.ts
 /test-results/
 /playwright-report/
 /playwright/.cache/
+
+# allure
+/allure-report/
+/allure-results/
