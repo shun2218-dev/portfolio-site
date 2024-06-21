@@ -34,8 +34,8 @@
     "typescript": "5.4.5"
   },
   "devDependencies": {
+    "@playwright/test": "^1.44.1",
     "@axe-core/playwright": "^4.9.1",
-    "@playwright/test": "^1.44.0",
     "@types/aos": "^3.0.7",
     "@typescript-eslint/eslint-plugin": "^7.8.0",
     "@typescript-eslint/parser": "^7.8.0",
