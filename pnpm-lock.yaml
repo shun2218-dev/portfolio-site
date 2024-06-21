@@ -9,8 +9,8 @@ dependencies:
     specifier: 20.12.7
     version: 20.12.7
   '@types/react':
-    specifier: 18.3.1
-    version: 18.3.1
+    specifier: 18.3.3
+    version: 18.3.3
   '@types/react-dom':
     specifier: 18.3.0
     version: 18.3.0
@@ -56,8 +56,8 @@ dependencies:
 
 devDependencies:
   '@axe-core/playwright':
-    specifier: ^4.9.0
-    version: 4.9.0(playwright-core@1.44.0)
+    specifier: ^4.9.1
+    version: 4.9.1(playwright-core@1.44.0)
   '@playwright/test':
     specifier: ^1.44.1
     version: 1.44.1
@@ -94,8 +94,8 @@ devDependencies:
 
 packages:
 
-  /@axe-core/playwright@4.9.0(playwright-core@1.44.0):
-    resolution: {integrity: sha512-Q1Lz75dNsX38jof+aev7RficDMdH/HLOLySkDdXR0fUoeFcLdw4UNgDO2CNNP4CTpoesEdfYRdd6VmDXjhBgbA==}
+  /@axe-core/playwright@4.9.1(playwright-core@1.44.0):
+    resolution: {integrity: sha512-8m4WZbZq7/aq7ZY5IG8GqV+ZdvtGn/iJdom+wBg+iv/3BAOBIfNQtIu697a41438DzEEyptXWmC3Xl5Kx/o9/g==}
     peerDependencies:
       playwright-core: '>= 1.0.0'
     dependencies:
@@ -539,11 +539,11 @@ packages:
   /@types/react-dom@18.3.0:
     resolution: {integrity: sha512-EhwApuTmMBmXuFOikhQLIBUn6uFg81SwLMOAUgodJF14SOBOCMdU04gDoYi0WOJJHD144TL32z4yDqCW3dnkQg==}
     dependencies:
-      '@types/react': 18.3.1
+      '@types/react': 18.3.3
     dev: false
 
-  /@types/react@18.3.1:
-    resolution: {integrity: sha512-V0kuGBX3+prX+DQ/7r2qsv1NsdfnCLnTgnRJ1pYnxykBhGMz+qj+box5lq7XsO5mtZsBqpjwwTu/7wszPfMBcw==}
+  /@types/react@18.3.3:
+    resolution: {integrity: sha512-hti/R0pS0q1/xx+TsI73XIqk26eBsISZ2R0wUijXIngRK9R/e7Xw/cXVxQK7R5JjW+SV4zGcn5hXjudkN/pLIw==}
     dependencies:
       '@types/prop-types': 15.7.12
       csstype: 3.1.3
