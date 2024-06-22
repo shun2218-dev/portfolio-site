@@ -5,7 +5,7 @@ import '~/styles/sneakers/globals.scss'
 
 const siteName = 'Sneakers'
 const description = 'Sneakers is a fictitious website. This website was created using design comps that can be used as a free portfolio.'
-const url = process.env.NEXT_PUBLIC_SITE_URL_PON
+const url = process.env.NEXT_PUBLIC_SITE_URL_SNEAKERS
 
 export const metadata: Metadata = {
   title: {
