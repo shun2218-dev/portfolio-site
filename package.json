@@ -38,7 +38,7 @@
     "@axe-core/playwright": "^4.9.1",
     "@types/aos": "^3.0.7",
     "@typescript-eslint/eslint-plugin": "^7.13.1",
-    "@typescript-eslint/parser": "^7.13.0",
+    "@typescript-eslint/parser": "^7.16.0",
     "allure-commandline": "^2.29.0",
     "allure-playwright": "^2.15.1",
     "aos": "^2.3.4",
