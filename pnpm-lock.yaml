@@ -28,7 +28,7 @@ dependencies:
     version: 14.2.4(eslint@9.6.0)(typescript@5.5.2)
   next:
     specifier: 14.2.4
-    version: 14.2.4(@playwright/test@1.45.1)(react-dom@18.3.1)(react@18.3.1)(sass@1.77.6)
+    version: 14.2.4(@playwright/test@1.45.1)(react-dom@18.3.1)(react@18.3.1)(sass@1.78.0)
   react:
     specifier: 18.3.1
     version: 18.3.1
@@ -39,8 +39,8 @@ dependencies:
     specifier: ^17.5.0
     version: 17.5.0(react-dom@18.3.1)(react@18.3.1)
   sass:
-    specifier: ^1.75.0
-    version: 1.77.6
+    specifier: ^1.78.0
+    version: 1.78.0
   sharp:
     specifier: ^0.33.3
     version: 0.33.4
@@ -747,7 +747,7 @@ packages:
       react:
         optional: true
     dependencies:
-      next: 14.2.4(@playwright/test@1.45.1)(react-dom@18.3.1)(react@18.3.1)(sass@1.77.6)
+      next: 14.2.4(@playwright/test@1.45.1)(react-dom@18.3.1)(react@18.3.1)(sass@1.78.0)
       react: 18.3.1
       server-only: 0.0.1
     dev: false
@@ -776,7 +776,7 @@ packages:
       vue-router:
         optional: true
     dependencies:
-      next: 14.2.4(@playwright/test@1.45.1)(react-dom@18.3.1)(react@18.3.1)(sass@1.77.6)
+      next: 14.2.4(@playwright/test@1.45.1)(react-dom@18.3.1)(react@18.3.1)(sass@1.78.0)
       react: 18.3.1
     dev: false
 
@@ -2420,7 +2420,7 @@ packages:
   /natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
 
-  /next@14.2.4(@playwright/test@1.45.1)(react-dom@18.3.1)(react@18.3.1)(sass@1.77.6):
+  /next@14.2.4(@playwright/test@1.45.1)(react-dom@18.3.1)(react@18.3.1)(sass@1.78.0):
     resolution: {integrity: sha512-R8/V7vugY+822rsQGQCjoLhMuC9oFj9SOi4Cl4b2wjDrseD0LRZ10W7R6Czo4w9ZznVSshKjuIomsRjvm9EKJQ==}
     engines: {node: '>=18.17.0'}
     hasBin: true
@@ -2447,7 +2447,7 @@ packages:
       postcss: 8.4.31
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
-      sass: 1.77.6
+      sass: 1.78.0
       styled-jsx: 5.1.1(react@18.3.1)
     optionalDependencies:
       '@next/swc-darwin-arm64': 14.2.4
@@ -2820,8 +2820,8 @@ packages:
       is-regex: 1.1.4
     dev: false
 
-  /sass@1.77.6:
-    resolution: {integrity: sha512-ByXE1oLD79GVq9Ht1PeHWCPMPB8XHpBuz1r85oByKHjZY6qV6rWnQovQzXJXuQ/XyE1Oj3iPk3lo28uzaRA2/Q==}
+  /sass@1.78.0:
+    resolution: {integrity: sha512-AaIqGSrjo5lA2Yg7RvFZrlXDBCp3nV4XP73GrLGvdRWWwk+8H3l0SDvq/5bA4eF+0RFPLuWUk3E+P1U/YqnpsQ==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
