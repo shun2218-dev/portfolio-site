@@ -21,17 +21,17 @@
     "@types/react-dom": "18.3.0",
     "@vercel/analytics": "^1.2.2",
     "@vercel/speed-insights": "^1.0.10",
-    "eslint": "9.6.0",
-    "eslint-config-next": "14.2.4",
     "next": "14.2.11",
+    "eslint": "9.11.0",
+    "eslint-config-next": "14.2.11",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-use": "^17.5.0",
-    "sass": "^1.75.0",
+    "sass": "^1.79.3",
     "sharp": "^0.33.3",
     "swiper": "^11.1.1",
     "swr": "^2.2.5",
-    "typescript": "5.5.2"
+    "typescript": "5.6.2"
   },
   "devDependencies": {
     "@playwright/test": "^1.45.1",
