@@ -28,7 +28,7 @@ dependencies:
     version: 14.2.11(eslint@9.11.0)(typescript@5.6.2)
   next:
     specifier: 14.2.11
-    version: 14.2.11(@playwright/test@1.45.1)(react-dom@18.3.1)(react@18.3.1)(sass@1.77.6)
+    version: 14.2.11(@playwright/test@1.45.1)(react-dom@18.3.1)(react@18.3.1)(sass@1.79.3)
   react:
     specifier: 18.3.1
     version: 18.3.1
@@ -56,8 +56,8 @@ dependencies:
 
 devDependencies:
   '@axe-core/playwright':
-    specifier: ^4.9.1
-    version: 4.9.1(playwright-core@1.47.0)
+    specifier: ^4.10.0
+    version: 4.10.0(playwright-core@1.47.0)
   '@playwright/test':
     specifier: ^1.45.1
     version: 1.45.1
@@ -94,12 +94,12 @@ devDependencies:
 
 packages:
 
-  /@axe-core/playwright@4.9.1(playwright-core@1.47.0):
-    resolution: {integrity: sha512-8m4WZbZq7/aq7ZY5IG8GqV+ZdvtGn/iJdom+wBg+iv/3BAOBIfNQtIu697a41438DzEEyptXWmC3Xl5Kx/o9/g==}
+  /@axe-core/playwright@4.10.0(playwright-core@1.47.0):
+    resolution: {integrity: sha512-kEr3JPEVUSnKIYp/egV2jvFj+chIjCjPp3K3zlpJMza/CB3TFw8UZNbI9agEC2uMz4YbgAOyzlbUy0QS+OofFA==}
     peerDependencies:
       playwright-core: '>= 1.0.0'
     dependencies:
-      axe-core: 4.9.1
+      axe-core: 4.10.0
       playwright-core: 1.47.0
     dev: true
 
@@ -833,7 +833,7 @@ packages:
       react:
         optional: true
     dependencies:
-      next: 14.2.11(@playwright/test@1.45.1)(react-dom@18.3.1)(react@18.3.1)(sass@1.77.6)
+      next: 14.2.11(@playwright/test@1.45.1)(react-dom@18.3.1)(react@18.3.1)(sass@1.79.3)
       react: 18.3.1
       server-only: 0.0.1
     dev: false
@@ -862,7 +862,7 @@ packages:
       vue-router:
         optional: true
     dependencies:
-      next: 14.2.11(@playwright/test@1.45.1)(react-dom@18.3.1)(react@18.3.1)(sass@1.77.6)
+      next: 14.2.11(@playwright/test@1.45.1)(react-dom@18.3.1)(react@18.3.1)(sass@1.79.3)
       react: 18.3.1
     dev: false
 
@@ -1064,9 +1064,15 @@ packages:
       possible-typed-array-names: 1.0.0
     dev: false
 
+  /axe-core@4.10.0:
+    resolution: {integrity: sha512-Mr2ZakwQ7XUAjp7pAwQWRhhK8mQQ6JAaNWSjmjxil0R8BPioMtQsTLOolGYkji1rcL++3dCqZA3zWqpT+9Ew6g==}
+    engines: {node: '>=4'}
+    dev: true
+
   /axe-core@4.9.1:
     resolution: {integrity: sha512-QbUdXJVTpvUTHU7871ppZkdOLBeGUKBQWHkHrvN2V9IQWGMt61zf3B45BtzjxEJzYuj0JBjBZP/hmYS/R9pmAw==}
     engines: {node: '>=4'}
+    dev: false
 
   /axobject-query@3.1.1:
     resolution: {integrity: sha512-goKlv8DZrK9hUh975fnHzhNIO4jUnFCfv/dszV5VwUGDFjI6vQ2VwoyjYjYNEbBE8AH87TduWP5uyDR1D+Iteg==}
@@ -2475,7 +2481,7 @@ packages:
   /natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
 
-  /next@14.2.11(@playwright/test@1.45.1)(react-dom@18.3.1)(react@18.3.1)(sass@1.77.6):
+  /next@14.2.11(@playwright/test@1.45.1)(react-dom@18.3.1)(react@18.3.1)(sass@1.79.3):
     resolution: {integrity: sha512-8MDFqHBhdmR2wdfaWc8+lW3A/hppFe1ggQ9vgIu/g2/2QEMYJrPoQP6b+VNk56gIug/bStysAmrpUKtj3XN8Bw==}
     engines: {node: '>=18.17.0'}
     hasBin: true
