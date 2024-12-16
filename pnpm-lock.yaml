@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@types/node':
-    specifier: 20.14.10
-    version: 20.14.10
+    specifier: 22.10.2
+    version: 22.10.2
   '@types/react':
     specifier: 18.3.3
     version: 18.3.3
@@ -28,7 +28,7 @@ dependencies:
     version: 14.2.11(eslint@9.11.0)(typescript@5.6.2)
   next:
     specifier: 14.2.11
-    version: 14.2.11(@playwright/test@1.45.1)(react-dom@18.3.1)(react@18.3.1)(sass@1.77.6)
+    version: 14.2.11(@playwright/test@1.45.1)(react-dom@18.3.1)(react@18.3.1)(sass@1.79.3)
   react:
     specifier: 18.3.1
     version: 18.3.1
@@ -541,10 +541,10 @@ packages:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: false
 
-  /@types/node@20.14.10:
-    resolution: {integrity: sha512-MdiXf+nDuMvY0gJKxyfZ7/6UFsETO7mGKF54MVD/ekJS6HdFtpZFBgrh6Pseu64XTb2MLyFPlbW6hj8HYRQNOQ==}
+  /@types/node@22.10.2:
+    resolution: {integrity: sha512-Xxr6BBRCAOQixvonOye19wnzyDiUtTeqldOOmj3CkeblonbccA12PFwlufvRdrpjXxqnmUaeiU5EOA+7s5diUQ==}
     dependencies:
-      undici-types: 5.26.5
+      undici-types: 6.20.0
     dev: false
 
   /@types/prop-types@15.7.12:
@@ -833,7 +833,7 @@ packages:
       react:
         optional: true
     dependencies:
-      next: 14.2.11(@playwright/test@1.45.1)(react-dom@18.3.1)(react@18.3.1)(sass@1.77.6)
+      next: 14.2.11(@playwright/test@1.45.1)(react-dom@18.3.1)(react@18.3.1)(sass@1.79.3)
       react: 18.3.1
       server-only: 0.0.1
     dev: false
@@ -862,7 +862,7 @@ packages:
       vue-router:
         optional: true
     dependencies:
-      next: 14.2.11(@playwright/test@1.45.1)(react-dom@18.3.1)(react@18.3.1)(sass@1.77.6)
+      next: 14.2.11(@playwright/test@1.45.1)(react-dom@18.3.1)(react@18.3.1)(sass@1.79.3)
       react: 18.3.1
     dev: false
 
@@ -2475,7 +2475,7 @@ packages:
   /natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
 
-  /next@14.2.11(@playwright/test@1.45.1)(react-dom@18.3.1)(react@18.3.1)(sass@1.77.6):
+  /next@14.2.11(@playwright/test@1.45.1)(react-dom@18.3.1)(react@18.3.1)(sass@1.79.3):
     resolution: {integrity: sha512-8MDFqHBhdmR2wdfaWc8+lW3A/hppFe1ggQ9vgIu/g2/2QEMYJrPoQP6b+VNk56gIug/bStysAmrpUKtj3XN8Bw==}
     engines: {node: '>=18.17.0'}
     hasBin: true
@@ -3316,8 +3316,8 @@ packages:
       which-boxed-primitive: 1.0.2
     dev: false
 
-  /undici-types@5.26.5:
-    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
+  /undici-types@6.20.0:
+    resolution: {integrity: sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg==}
     dev: false
 
   /uri-js@4.4.1:
