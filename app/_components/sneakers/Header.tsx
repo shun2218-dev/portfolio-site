@@ -28,7 +28,7 @@ const HeaderMemo = () => {
 
   return (
     <header className={styles['p-header']}>
-      <Link className={styles['p-header__logo-link']} href="/sneakers" aria-label="Sneakers" role="img">
+      <Link className={styles['p-header__logo-link']} href="/sneakers">
         <h1 className={styles['p-header__title']}>
           <Image src="/images/sneakers/logo.svg" alt="Sneakers" className={styles['p-header__logo']} width={175} height={40} />
         </h1>
