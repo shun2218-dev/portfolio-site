@@ -33,10 +33,19 @@ const HeaderMemo = () => {
           <Image src="/images/sneakers/logo.svg" alt="Sneakers" className={styles['l-header__logo']} width={175} height={40} />
         </Link>
       </h1>
-      <button type="button" className={[styles['l-header__menu-button'], 'js-menu-button'].join(' ')} data-is-menu-open={isMenuOpen} onClick={() => setIsMenuOpen((prev) => !prev)}>
+      <button
+        type="button"
+        className={[styles['l-header__menu-button'], 'js-menu-button'].join(' ')}
+        data-is-menu-open={isMenuOpen}
+        onClick={() => setIsMenuOpen((prev) => !prev)}
+        id="header-nav-button"
+        aria-label="navigation button"
+        aria-controls="header-nav"
+        aria-expanded={isMenuOpen}
+      >
         <span className={styles['l-header__menu-bar']}></span>
       </button>
-      <nav className={styles['l-header__nav']} data-is-menu-open={isMenuOpen}>
+      <nav className={styles['l-header__nav']} data-is-menu-open={isMenuOpen} id="header-nav">
         <ul className={styles['l-header__menu-list']}>
           <li className={styles['l-header__menu-item']}>
             <Link href="#pickup" className={[styles['l-header__menu-link'], 'js-header-nav'].join(' ')} onClick={pageJump}>
