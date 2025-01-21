@@ -29,7 +29,9 @@ const HeaderMemo = () => {
   return (
     <header className={styles['p-header']}>
       <Link className={styles['p-header__logo-link']} href="/sneakers" aria-label="Sneakers" role="img">
-        <Image src="/images/sneakers/logo.svg" alt="Sneakers" className={styles['p-header__logo']} width={175} height={40} />
+        <h1 className={styles['p-header__title']}>
+          <Image src="/images/sneakers/logo.svg" alt="Sneakers" className={styles['p-header__logo']} width={175} height={40} />
+        </h1>
       </Link>
       <button type="button" className={[styles['p-header__menu-button'], 'js-menu-button'].join(' ')} data-is-menu-open={isMenuOpen} onClick={() => setIsMenuOpen((prev) => !prev)}>
         <span className={styles['p-header__menu-bar']}></span>
