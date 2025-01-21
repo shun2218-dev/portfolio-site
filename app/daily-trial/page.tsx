@@ -25,7 +25,7 @@ const DTTopMemo = () => {
           </p>
         </div>
       </section>
-      <section className={[styles['p-about'], sectionStyles['c-section']].join(' ')}>
+      <section className={[styles['p-about'], sectionStyles['c-section']].join(' ')} id="about">
         <div className={sectionStyles['c-section__inner']}>
           <h3 className={sectionStyles['c-section__title']}>デイトラとは</h3>
           <div className={styles['p-about__content-wrapper']}>
@@ -49,7 +49,7 @@ const DTTopMemo = () => {
           </div>
         </div>
       </section>
-      <section className={[styles['p-course'], sectionStyles['c-section']].join(' ')}>
+      <section className={[styles['p-course'], sectionStyles['c-section']].join(' ')} id="course">
         <div className={sectionStyles['c-section__inner']}>
           <h3 className={sectionStyles['c-section__title']}>コース一覧</h3>
           <ul className={styles['p-course__list']}>
@@ -92,7 +92,7 @@ const DTTopMemo = () => {
           </ul>
         </div>
       </section>
-      <section className={[styles['p-contact'], sectionStyles['c-section']].join(' ')}>
+      <section className={[styles['p-contact'], sectionStyles['c-section']].join(' ')} id="contact">
         <div className={sectionStyles['c-section__inner']}>
           <h3 className={sectionStyles['c-section__title']}>お問い合わせ</h3>
           <div className={styles['p-contact__text-container']}>
