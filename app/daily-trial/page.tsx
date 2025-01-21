@@ -8,14 +8,14 @@ const DTTopMemo = () => {
     <main>
       <section className={[styles['p-hero'], sectionStyles['c-section']].join(' ')}>
         <div className={[styles['p-hero__inner'], sectionStyles['c-section__inner']].join(' ')}>
-          <h1 className={styles['p-hero__title']}>
+          <h2 className={styles['p-hero__title']}>
             1日1題30日で
             <span>
               プロのWebエンジニア
               <br className="u-sp-br" />
               になろう!
             </span>
-          </h1>
+          </h2>
           <p className={styles['p-hero__text']}>
             毎日設定された課題をこなすだけ！
             <br className="u-sp-br" />
@@ -27,7 +27,7 @@ const DTTopMemo = () => {
       </section>
       <section className={[styles['p-about'], sectionStyles['c-section']].join(' ')}>
         <div className={sectionStyles['c-section__inner']}>
-          <h1 className={sectionStyles['c-section__title']}>デイトラとは</h1>
+          <h3 className={sectionStyles['c-section__title']}>デイトラとは</h3>
           <div className={styles['p-about__content-wrapper']}>
             <div className={styles['p-about__image-container']}>
               <Image
@@ -51,7 +51,7 @@ const DTTopMemo = () => {
       </section>
       <section className={[styles['p-course'], sectionStyles['c-section']].join(' ')}>
         <div className={sectionStyles['c-section__inner']}>
-          <h1 className={sectionStyles['c-section__title']}>コース一覧</h1>
+          <h3 className={sectionStyles['c-section__title']}>コース一覧</h3>
           <ul className={styles['p-course__list']}>
             <li className={styles['p-course__item']}>
               <Image
@@ -94,7 +94,7 @@ const DTTopMemo = () => {
       </section>
       <section className={[styles['p-contact'], sectionStyles['c-section']].join(' ')}>
         <div className={sectionStyles['c-section__inner']}>
-          <h1 className={sectionStyles['c-section__title']}>お問い合わせ</h1>
+          <h3 className={sectionStyles['c-section__title']}>お問い合わせ</h3>
           <div className={styles['p-contact__text-container']}>
             <p className={styles['p-contact__text']}>さあ今日から30日間を始めよう！</p>
           </div>
