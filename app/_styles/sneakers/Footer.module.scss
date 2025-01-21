@@ -1,15 +1,15 @@
 @charset "utf-8";
 @use './config/variables' as var;
 /* ========================================================
-                      .p-footer
+                      .l-footer
 ========================================================*/
-.p-footer {
+.l-footer {
   text-align: center;
   background-color: var.$footer-bg;
   padding: 12px 0;
 }
 
-.p-footer__copyrights {
+.l-footer__copyrights {
   color: var.$font-color-white;
   font-size: 12px;
 }

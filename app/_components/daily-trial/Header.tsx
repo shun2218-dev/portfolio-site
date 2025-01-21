@@ -5,26 +5,26 @@ import Link from 'next/link'
 
 const HeaderMemo = () => {
   return (
-    <header className={[styles['p-header'], sectionStyles['c-section']].join(' ')}>
-      <div className={styles['p-header__inner']}>
-        <h1 className={styles['p-header__title']}>
-          <Link href="/daily-trial" className={styles['p-header__logo-link']}>
+    <header className={[styles['l-header'], sectionStyles['c-section']].join(' ')}>
+      <div className={styles['l-header__inner']}>
+        <h1 className={styles['l-header__title']}>
+          <Link href="/daily-trial" className={styles['l-header__logo-link']}>
             30DAYSトライアル
           </Link>
         </h1>
-        <ul className={styles['p-header__menu']}>
-          <li className={styles['p-header__menu-item']}>
-            <Link href="#about" className={styles['p-header__menu-item-link']}>
+        <ul className={styles['l-header__menu']}>
+          <li className={styles['l-header__menu-item']}>
+            <Link href="#about" className={styles['l-header__menu-item-link']}>
               デイトラとは
             </Link>
           </li>
-          <li className={styles['p-header__menu-item']}>
-            <Link href="#course" className={styles['p-header__menu-item-link']}>
+          <li className={styles['l-header__menu-item']}>
+            <Link href="#course" className={styles['l-header__menu-item-link']}>
               コース一覧
             </Link>
           </li>
-          <li className={styles['p-header__menu-item']}>
-            <Link href="#contact" className={styles['p-header__menu-item-link']}>
+          <li className={styles['l-header__menu-item']}>
+            <Link href="#contact" className={styles['l-header__menu-item-link']}>
               お問い合わせ
             </Link>
           </li>
