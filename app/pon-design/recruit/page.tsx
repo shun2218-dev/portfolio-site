@@ -14,12 +14,12 @@ const RecruitPage = () => {
     <PageLayout title={'RECRUIT'} subTitle={'採用情報'}>
       <section className={styles['p-recruit-message']}>
         <div className={styles['p-recruit-message__inner']}>
-          <h2 className={[styles['p-recruit-message__title'], titleStyles['c-title'], titleStyles['c-title--section'], titleStyles['c-title--lg']].join(' ')}>
+          <p className={[styles['p-recruit-message__title'], titleStyles['c-title'], titleStyles['c-title--section'], titleStyles['c-title--lg']].join(' ')}>
             Enjoy <br className="u-only-sp" />
             Creation for <br className="u-only-sp" />
             Client
             <span className={[styles['p-recruit-message__sub-title'], titleStyles['c-title--thin'], titleStyles['c-title--sm']].join(' ')}>楽しむ心が良いモノを生む</span>
-          </h2>
+          </p>
           <div className={styles['p-recruit-message__text-wrapper']}>
             <span className={styles['p-recruit-message__text']}>心を弾ましながら</span>
             <span className={styles['p-recruit-message__text']}>夢いっぱいのサイトを作ろう！</span>
@@ -54,7 +54,7 @@ const RecruitPage = () => {
       </section>
       <section className={styles['p-recruit-info']}>
         <div className={styles['p-recruit-info__inner']}>
-          <Title title={'募集中の職種'} className={['c-title--section', 'c-title--thin', 'c-title--sm']} />
+          <Title as="h3" title={'募集中の職種'} className={['c-title--section', 'c-title--thin', 'c-title--sm']} />
           <ul className={styles['p-recruit-info__job-list']}>
             <li className={styles['p-recruit-info__job']}>
               <dl className={styles['p-recruit-info__job-card']}>
@@ -88,7 +88,7 @@ const RecruitPage = () => {
       </section>
       <section className={styles['p-recruit-video']}>
         <div className={styles['p-recruit-video__inner']}>
-          <Title title={'社内ムービー'} className={['c-title--section', 'c-title--thin', 'c-title--sm']} />
+          <Title as="h3" title={'社内ムービー'} className={['c-title--section', 'c-title--thin', 'c-title--sm']} />
           <div className={styles['p-recruit-video__image-wrapper']}>
             {breakpoint === 'smartphone' ? (
               <Image
