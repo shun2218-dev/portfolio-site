@@ -42,7 +42,7 @@ const SneakersTopMemo = () => {
       </section>
       <section id="pickup" className={[styles['p-pickup'], 'c-section'].join(' ')}>
         <div className={styles['p-pickup__inner']}>
-          <h1 className="c-section__title">PICK UP</h1>
+          <h2 className="c-section__title">PICK UP</h2>
 
           {!isLoading && (
             <Swiper
@@ -80,7 +80,7 @@ const SneakersTopMemo = () => {
       </section>
       <section id="feature" className={[styles['p-feature'], 'c-section'].join(' ')}>
         <div className={styles['p-feature__inner']}>
-          <h1 className="c-section__title">FEATURE</h1>
+          <h2 className="c-section__title">FEATURE</h2>
           <ul className={styles['p-feature__card-list']}>
             {!isLoading &&
               isVideoReady &&
@@ -110,7 +110,7 @@ const SneakersTopMemo = () => {
       </section>
       <section id="contact" className={[styles['p-contact'], 'c-section'].join(' ')}>
         <div className={styles['p-contact__inner']}>
-          <h1 className="c-section__title">CONTACT</h1>
+          <h2 className="c-section__title">CONTACT</h2>
           <div className={styles['p-contact__wrapper']}>
             <div className={styles['p-contact__text-container']}>
               <p className={styles['p-contact__text']}>テキストテキストテキスト</p>

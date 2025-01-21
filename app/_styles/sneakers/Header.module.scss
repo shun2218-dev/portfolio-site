@@ -1,9 +1,9 @@
 @charset "utf-8";
 @use './config/variables' as var;
 /* ========================================================
-                      .p-header
+                      .l-header
 ========================================================*/
-.p-header {
+.l-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,7 +13,12 @@
   width: 100svw;
   z-index: 9999;
 }
-.p-header__menu-button {
+
+.l-header__title {
+  margin: 0;
+}
+
+.l-header__menu-button {
   background-color: transparent;
   border: none;
   width: 30px;
@@ -23,7 +28,7 @@
   z-index: 9999;
   cursor: pointer;
 }
-.p-header__menu-button span {
+.l-header__menu-button span {
   display: block;
   top: calc(50% - 1px);
   width: 100%;
@@ -34,7 +39,7 @@
     transform 0.3s ease-in-out,
     background-color 0.3s ease-in-out;
 }
-.p-header__menu-button span::before {
+.l-header__menu-button span::before {
   content: '';
   display: block;
   width: 100%;
@@ -47,7 +52,7 @@
     transform 0.3s ease-in-out,
     background-color 0.3s ease-in-out;
 }
-.p-header__menu-button span::after {
+.l-header__menu-button span::after {
   content: '';
   display: block;
   width: 100%;
@@ -60,14 +65,14 @@
     top 0.3s ease-in-out 0.3s,
     background-color 0.3s ease-in-out;
 }
-.p-header__menu-button[data-is-menu-open='true'] span {
+.l-header__menu-button[data-is-menu-open='true'] span {
   transform: rotate(-315deg);
   transition:
     transform 0.3s ease-in-out 0.3s,
     background-color 0.3s ease-in-out 0.3s;
   background-color: #ffffff;
 }
-.p-header__menu-button[data-is-menu-open='true'] span::before {
+.l-header__menu-button[data-is-menu-open='true'] span::before {
   bottom: 0px;
   transform: rotate(810deg);
   transition:
@@ -76,14 +81,14 @@
     background-color 0.3s ease-in-out 0.3s;
   background-color: #ffffff;
 }
-.p-header__menu-button[data-is-menu-open='true'] span::after {
+.l-header__menu-button[data-is-menu-open='true'] span::after {
   top: 0px;
   transition:
     top 0.3s ease-in-out,
     background-color 0.3s ease-in-out 0.3s;
   background-color: #ffffff;
 }
-.p-header__nav {
+.l-header__nav {
   opacity: 0;
   position: absolute;
   top: 0;
@@ -94,7 +99,7 @@
   height: 100svh;
   width: 300px;
 }
-.p-header__nav-overlay {
+.l-header__nav-overlay {
   width: 100svw;
   height: 100svh;
   background-color: #00000080;
@@ -106,38 +111,38 @@
   opacity: 0;
   left: -100%;
 }
-[data-is-menu-open='true'] + .p-header__nav-overlay {
+[data-is-menu-open='true'] + .l-header__nav-overlay {
   opacity: 1;
   transition:
     opacity 0.3s ease-in-out,
     left 0s;
   left: 0;
 }
-.p-header__nav[data-is-menu-open='true'] {
+.l-header__nav[data-is-menu-open='true'] {
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
   left: 0;
   z-index: 9999;
 }
-.p-header__nav a {
+.l-header__nav a {
   color: var.$font-color-white;
 }
-.p-header__menu-list {
+.l-header__menu-list {
   margin-bottom: 60px;
 }
-.p-header__menu-item {
+.l-header__menu-item {
   padding: 20px 0;
   border-top: 1px solid #ffffff;
 }
-.p-header__menu-item:last-child {
+.l-header__menu-item:last-child {
   border-bottom: 1px solid #ffffff;
 }
-.p-header__media-item {
+.l-header__media-item {
   padding: 5px 0;
 }
 
 @media screen and (min-width: 600px) {
-  .p-header {
+  .l-header {
     padding: 20px 40px;
   }
 }

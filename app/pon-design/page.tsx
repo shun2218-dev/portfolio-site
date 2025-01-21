@@ -79,7 +79,7 @@ const TopPageMemo = () => {
         heroArea={
           <section className={styles['p-top-hero']}>
             <div className={styles['p-top-hero__inner']}>
-              <h1 className={styles['p-top-hero__catch']}>
+              <h2 className={styles['p-top-hero__catch']}>
                 WEB DESIGN <br className="u-only-sp" />
                 SPECIALIST
                 <span className={styles['p-top-hero__sub-catch']}>
@@ -87,7 +87,7 @@ const TopPageMemo = () => {
                   <br className="u-only-sp" />
                   Webサイトを制作
                 </span>
-              </h1>
+              </h2>
               <Button label={'CONTACT'} href={'/pon-design/contact'} variant={'outlined'} id="hero-contact" ariaLabel="Page transition to contact page" />
             </div>
           </section>
@@ -107,7 +107,7 @@ const TopPageMemo = () => {
                       <span className={newsStyles['c-news__label-text']}>お知らせ</span>
                     </div>
                   </div>
-                  <h2 className={newsStyles['c-news__article-title']}>Webデザインニュースサイト「ウェブマガジン」に取材いただきました</h2>
+                  <h3 className={newsStyles['c-news__article-title']}>Webデザインニュースサイト「ウェブマガジン」に取材いただきました</h3>
                 </Link>
               </li>
               <li className={newsStyles['c-news__list-item']}>
@@ -120,7 +120,7 @@ const TopPageMemo = () => {
                       <span className={newsStyles['c-news__label-text']}>制作実績</span>
                     </div>
                   </div>
-                  <h2 className={newsStyles['c-news__article-title']}>Smoothiesta様のWebサイトを制作いたしました</h2>
+                  <h3 className={newsStyles['c-news__article-title']}>Smoothiesta様のWebサイトを制作いたしました</h3>
                 </Link>
               </li>
               <li className={newsStyles['c-news__list-item']}>
@@ -133,7 +133,7 @@ const TopPageMemo = () => {
                       <span className={newsStyles['c-news__label-text']}>採用</span>
                     </div>
                   </div>
-                  <h2 className={newsStyles['c-news__article-title']}>Webデザイナーを１名募集中です！</h2>
+                  <h3 className={newsStyles['c-news__article-title']}>Webデザイナーを１名募集中です！</h3>
                 </Link>
               </li>
             </ul>
@@ -156,7 +156,7 @@ const TopPageMemo = () => {
                     blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
                   />
                 </div>
-                <h2 className={[styles['p-top-service__item-title'], 'u-fs18'].join(' ')}>Webサイト制作</h2>
+                <h3 className={[styles['p-top-service__item-title'], 'u-fs18'].join(' ')}>Webサイト制作</h3>
                 <p className={styles['p-top-service__item-text']}>新規サイトの制作はもちろんサイトリニューアルやランディングページの制作も可能です。</p>
               </li>
               <li className={styles['p-top-service__list-item']}>
@@ -172,7 +172,7 @@ const TopPageMemo = () => {
                     blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
                   />
                 </div>
-                <h2 className={[styles['p-top-service__item-title'], 'u-fs18'].join(' ')}>Webサイト運用</h2>
+                <h3 className={[styles['p-top-service__item-title'], 'u-fs18'].join(' ')}>Webサイト運用</h3>
                 <p className={styles['p-top-service__item-text']}>サイトの更新作業や独自のアクセス解析に基づいたサイト改善のご提案をいたします。</p>
               </li>
               <li className={styles['p-top-service__list-item']}>
@@ -188,7 +188,7 @@ const TopPageMemo = () => {
                     blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII="
                   />
                 </div>
-                <h2 className={[styles['p-top-service__item-title'], 'u-fs18'].join(' ')}>アプリ開発</h2>
+                <h3 className={[styles['p-top-service__item-title'], 'u-fs18'].join(' ')}>アプリ開発</h3>
                 <p className={styles['p-top-service__item-text']}>スマートフォンアプリ開発の他、Vue.jsやReactによるWebアプリの開発が可能です。</p>
               </li>
             </ul>

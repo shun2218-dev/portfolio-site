@@ -13,7 +13,7 @@ const CompanyPage = () => {
     <PageLayout title={'COMPANY'} subTitle={'私たちについて'}>
       <section className={styles['p-company-message']}>
         <div className={styles['p-company-message__inner']}>
-          <Title title={'メッセージ'} className={['c-title--section', 'c-title--sm']} />
+          <Title as="h3" title={'メッセージ'} className={['c-title--section', 'c-title--sm']} />
           <p className={styles['p-company-message__goal']}>
             <span className={styles['p-company-message__goal-text']}>サイトのゴール = </span>
             <span className={styles['p-company-message__goal-text']}>夢を叶えること</span>
@@ -71,7 +71,7 @@ const CompanyPage = () => {
       </section>
       <section className={styles['p-company-info']}>
         <div className={styles['p-company-info__inner']}>
-          <Title title={'会社概要'} className={['c-title--section', 'c-title--sm']} />
+          <Title as="h3" title={'会社概要'} className={['c-title--section', 'c-title--sm']} />
           <dl className={styles['p-company-info__list']}>
             <dt className={styles['p-company-info__term']}>社名</dt>
             <dd className={styles['p-company-info__description']}>株式会社PON DESIGN</dd>

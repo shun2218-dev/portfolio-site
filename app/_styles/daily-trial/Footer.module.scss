@@ -1,23 +1,23 @@
 @charset "utf-8";
 /* ==============================================
-                p-footer
+                l-footer
 ================================================= */
-.p-footer {
+.l-footer {
   padding-top: 76px;
 }
 
-.p-footer__inner {
+.l-footer__inner {
   margin: 0 2%;
   padding: 7% 6%;
   border-top: 2px solid #cfcfcf;
 }
 
-.p-footer__text-container {
+.l-footer__text-container {
   display: flex;
   justify-content: center;
 }
 
-.p-footer__copyright {
+.l-footer__copyright {
   font-size: 9px;
   font-weight: 500;
   letter-spacing: 0.25px;
@@ -25,21 +25,21 @@
 }
 
 @media screen and (min-width: 768px) {
-  .p-footer {
+  .l-footer {
     padding-top: 71px;
   }
 
-  .p-footer__inner {
+  .l-footer__inner {
     margin: 0 10%;
     padding: 2% 0;
     border-top: 1px solid #cfcfcf;
   }
 
-  .p-footer__text-container {
+  .l-footer__text-container {
     justify-content: flex-end;
   }
 
-  .p-footer__copyright {
+  .l-footer__copyright {
     text-align: right;
     font-size: 13px;
     font-weight: 600;

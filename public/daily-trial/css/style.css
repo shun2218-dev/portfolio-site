@@ -44,13 +44,13 @@ h1, h2, h3, h4, h5, h6, p {
     }
 }
 /* ==============================================
-                p-header
+                l-header
 ================================================= */
-.p-header {
+.l-header {
     padding: 0 3%;
 }
 
-.p-header__inner {
+.l-header__inner {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -60,30 +60,30 @@ h1, h2, h3, h4, h5, h6, p {
     background-color: white;
 }
 
-.p-header__title {
+.l-header__title {
     font-weight: 800;
     font-size: 24px;
 }
 
-.p-header__menu {
+.l-header__menu {
     display: flex;
     justify-content: center;
     column-gap: 8px;
     width: 100%;
 }
 
-.p-header__menu-item {
+.l-header__menu-item {
     font-size: 11px;
     font-weight: 800;
     letter-spacing: 1px;
 }
 
-.p-header__menu-item:not(:first-child) {
+.l-header__menu-item:not(:first-child) {
     margin-left: 16px;
 }
 
 @media screen and (min-width: 768px) {
-    .p-header__inner {
+    .l-header__inner {
         flex-direction: row;
         justify-content: center;
         align-items: center;
@@ -91,20 +91,20 @@ h1, h2, h3, h4, h5, h6, p {
         padding: 27.5px 0; 
     }
 
-    .p-header__title {
+    .l-header__title {
         font-size: 28px;
         font-weight: 900;
         padding-right: 12%;
     }
 
-    .p-header__menu {
+    .l-header__menu {
         width: 50%;
         justify-content: flex-end;
         padding-right: 3%;
         column-gap: 4%;
     }
 
-    .p-header__menu-item {
+    .l-header__menu-item {
         font-size: 17px;
         font-weight: 800;
         letter-spacing: 0.5px;
@@ -328,24 +328,24 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 /* ==============================================
-                p-footer
+                l-footer
 ================================================= */
-.p-footer {
+.l-footer {
     padding-top: 76px;
 }
 
-.p-footer__inner {
+.l-footer__inner {
     margin: 0 2%;
     padding: 7% 6%;
     border-top: 2px solid #cfcfcf;
 }
 
-.p-footer__text-container {
+.l-footer__text-container {
     display: flex;
     justify-content: center;
 }
 
-.p-footer__copyright {
+.l-footer__copyright {
     font-size: 9px;    
     font-weight: 500;
     letter-spacing: 0.25px;
@@ -353,21 +353,21 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 @media screen and (min-width: 768px) {
-    .p-footer {
+    .l-footer {
         padding-top: 71px;
     }
 
-    .p-footer__inner {
+    .l-footer__inner {
         margin: 0 10%;
         padding: 2% 0;
         border-top: 1px solid #cfcfcf;        
     }
 
-    .p-footer__text-container {
+    .l-footer__text-container {
         justify-content: flex-end;
     }
     
-    .p-footer__copyright {
+    .l-footer__copyright {
         text-align: right;
         font-size: 13px;
         font-weight: 600;
