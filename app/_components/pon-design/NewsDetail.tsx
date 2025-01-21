@@ -17,7 +17,7 @@ const NewsDetailMemo: FC<Props> = ({ title, dateTime, label }) => {
   return (
     <article className={styles['p-detail-content']}>
       <div className={styles['p-detail-content__inner']}>
-        <h1 className={styles['p-detail-content__page-title']}>{title}</h1>
+        <h3 className={styles['p-detail-content__page-title']}>{title}</h3>
         <div className={[styles['p-detail-content__header'], newsStyles['c-news__header']].join(' ')}>
           <time className={newsStyles['c-news__date']} dateTime="2030-02-01">
             {dateTime.year}.{dateTime.month}.{dateTime.day}
@@ -54,11 +54,11 @@ const NewsDetailMemo: FC<Props> = ({ title, dateTime, label }) => {
         </div>
         <div className={styles['p-detail-content__main-sententce']}>
           <div className={styles['p-detail-content__sentence-wrapper']}>
-            <h2 className={styles['p-detail-content__topic-title']}>大見出し</h2>
+            <h4 className={styles['p-detail-content__topic-title']}>大見出し</h4>
             <p className={styles['p-detail-content__sentence']}>テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
           </div>
           <div className={styles['p-detail-content__sentence-wrapper']}>
-            <h3 className={styles['p-detail-content__subject-title']}>小見出し</h3>
+            <h5 className={styles['p-detail-content__subject-title']}>小見出し</h5>
             <p className={styles['p-detail-content__sentence']}>テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
             <p className={styles['p-detail-content__sentence']}>テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
           </div>
