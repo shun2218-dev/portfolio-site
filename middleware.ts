@@ -14,16 +14,13 @@ export function middleware(req: NextRequest) {
     return NextResponse.next()
   }
   const basicAuth = req.headers.get('authorization')
-
   if (basicAuth) {
     const authValue = basicAuth.split(' ')[1]
     const [user, pwd] = decodeBase64(authValue).split(':')
-
-    if (user === process.env.AUTH_USER && pwd === process.env.AUTH_PASS) {
+    if (user === process.env.NEXT_PUBLIC_USER && pwd === process.env.NEXT_PUBLIC_PASS) {
       return NextResponse.next()
     }
   }
-
   return NextResponse.json('Basic Auth Required', { headers: { 'WWW-Authenticate': 'Basic realm="Secure Area"' }, status: 401 })
 }
 

@@ -1,0 +1,18 @@
+@use './config' as config;
+
+.projectsSection {
+  background-color: config.$color-background-secondary;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  @media (min-width: config.$breakpoint-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: config.$breakpoint-lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
