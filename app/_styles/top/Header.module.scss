@@ -1,0 +1,51 @@
+@use './config' as config;
+
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: rgba(config.$color-background, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 10;
+  border-bottom: 1px solid config.$color-surface;
+}
+
+.nav {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navLogo {
+  a {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: config.$color-text-primary;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: config.$color-accent;
+    }
+  }
+}
+
+.navLinks {
+  display: flex;
+  gap: 1.5rem;
+
+  a {
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: config.$color-text-secondary;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: config.$color-accent;
+    }
+  }
+}
